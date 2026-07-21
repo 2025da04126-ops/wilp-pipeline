@@ -1,0 +1,85 @@
+# DVC Pipeline Definition for RecoMart
+# This file defines the data processing pipeline stages for DVC
+
+stages:
+  generate_data:
+    cmd: python src/generate_data.py
+    deps:
+      - src/generate_data.py
+      - src/config.py
+    outs:
+      - data/raw/clickstream/clickstream.csv
+      - data/raw/transactions/transactions.csv
+      - data/raw/products/products.csv
+      - data/raw/products/users.csv
+      - data/raw/external_api/external_scores.csv
+
+  ingest:
+    cmd: python src/ingestion/ingest_data.py
+    deps:
+      - src/ingestion/ingest_data.py
+      - data/raw/clickstream/clickstream.csv
+      - data/raw/transactions/transactions.csv
+      - data/raw/products/products.csv
+    outs:
+      - data/raw/ingestion_report.json
+
+  validate:
+    cmd: python src/validation/validate_data.py
+    deps:
+      - src/validation/validate_data.py
+      - data/raw/clickstream/clickstream.csv
+      - data/raw/transactions/transactions.csv
+      - data/raw/products/products.csv
+    outs:
+      - data/processed/data_quality_report.json
+
+  prepare:
+    cmd: python src/preparation/prepare_data.py
+    deps:
+      - src/preparation/prepare_data.py
+      - data/raw/clickstream/clickstream.csv
+      - data/raw/transactions/transactions.csv
+      - data/raw/products/products.csv
+      - data/raw/products/users.csv
+    outs:
+      - data/processed/transactions_clean.csv
+      - data/processed/products_clean.csv
+      - data/processed/users_clean.csv
+      - data/processed/clickstream_clean.csv
+
+  transform:
+    cmd: python src/transformation/transform_data.py
+    deps:
+      - src/transformation/transform_data.py
+      - data/processed/transactions_clean.csv
+      - data/processed/products_clean.csv
+      - data/processed/users_clean.csv
+      - data/processed/clickstream_clean.csv
+    outs:
+      - data/features/user_features.csv
+      - data/features/item_features.csv
+      - data/features/interaction_features.csv
+      - data/features/feature_metadata.json
+
+  feature_store:
+    cmd: python src/feature_store/feature_store.py
+    deps:
+      - src/feature_store/feature_store.py
+      - data/features/user_features.csv
+      - data/features/item_features.csv
+      - data/features/interaction_features.csv
+
+  train:
+    cmd: python src/training/train_model.py
+    deps:
+      - src/training/train_model.py
+      - data/features/interaction_features.csv
+      - data/features/item_features.csv
+    outs:
+      - data/models/cf_svd_model.pkl
+      - data/models/cb_model.pkl
+      - data/models/model_metadata.json
+    metrics:
+      - data/models/model_metadata.json:
+          cache: false

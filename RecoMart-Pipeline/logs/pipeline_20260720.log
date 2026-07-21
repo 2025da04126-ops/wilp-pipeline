@@ -1,0 +1,515 @@
+2026-07-20 20:52:27,047 - data_generator - INFO - save_data:157 - Starting synthetic data generation...
+2026-07-20 20:52:27,461 - data_generator - INFO - save_data:168 - Generated 500 user records
+2026-07-20 20:52:27,466 - data_generator - INFO - save_data:171 - Generated 200 product records
+2026-07-20 20:52:27,486 - data_generator - INFO - save_data:174 - Generated 5050 transaction records
+2026-07-20 20:52:27,532 - data_generator - INFO - save_data:177 - Generated 15000 clickstream events
+2026-07-20 20:52:27,537 - data_generator - INFO - save_data:180 - Generated 200 external API records
+2026-07-20 20:52:27,539 - data_generator - INFO - save_data:182 - Synthetic data generation completed successfully!
+2026-07-20 20:52:42,345 - validation - INFO - validate_all_sources:302 - ============================================================
+2026-07-20 20:52:42,346 - validation - INFO - validate_all_sources:303 - Starting Data Validation Pipeline
+2026-07-20 20:52:42,346 - validation - INFO - validate_all_sources:304 - ============================================================
+2026-07-20 20:52:42,359 - validation - INFO - run_all_checks:243 - Running validation for: transactions
+2026-07-20 20:52:42,360 - validation - INFO - run_all_checks:244 - ----------------------------------------
+2026-07-20 20:52:42,360 - validation - INFO - validate_schema:109 - [transactions] Schema validation passed
+2026-07-20 20:52:42,365 - validation - INFO - check_missing_values:134 - [transactions] Total missing values: 364
+2026-07-20 20:52:42,371 - validation - INFO - check_duplicates:165 - [transactions] Duplicates: 47 total, 50 by PK
+2026-07-20 20:52:42,387 - validation - INFO - run_all_checks:264 - [transactions] Quality Score: 82.0/100
+2026-07-20 20:52:42,387 - validation - INFO - run_all_checks:265 - [transactions] Issues: 5 (1 critical, 4 warnings)
+2026-07-20 20:52:42,393 - validation - INFO - run_all_checks:243 - Running validation for: products
+2026-07-20 20:52:42,394 - validation - INFO - run_all_checks:244 - ----------------------------------------
+2026-07-20 20:52:42,394 - validation - INFO - validate_schema:109 - [products] Schema validation passed
+2026-07-20 20:52:42,396 - validation - INFO - check_missing_values:134 - [products] Total missing values: 0
+2026-07-20 20:52:42,399 - validation - INFO - check_duplicates:165 - [products] Duplicates: 0 total, 0 by PK
+2026-07-20 20:52:42,408 - validation - INFO - run_all_checks:264 - [products] Quality Score: 100.0/100
+2026-07-20 20:52:42,409 - validation - INFO - run_all_checks:265 - [products] Issues: 0 (0 critical, 0 warnings)
+2026-07-20 20:52:42,440 - validation - INFO - run_all_checks:243 - Running validation for: clickstream
+2026-07-20 20:52:42,440 - validation - INFO - run_all_checks:244 - ----------------------------------------
+2026-07-20 20:52:42,441 - validation - INFO - validate_schema:109 - [clickstream] Schema validation passed
+2026-07-20 20:52:42,447 - validation - INFO - check_missing_values:134 - [clickstream] Total missing values: 0
+2026-07-20 20:52:42,462 - validation - INFO - check_duplicates:165 - [clickstream] Duplicates: 0 total, 0 by PK
+2026-07-20 20:52:42,483 - validation - INFO - run_all_checks:264 - [clickstream] Quality Score: 100.0/100
+2026-07-20 20:52:42,484 - validation - INFO - run_all_checks:265 - [clickstream] Issues: 0 (0 critical, 0 warnings)
+2026-07-20 20:52:42,491 - validation - INFO - run_all_checks:243 - Running validation for: external_scores
+2026-07-20 20:52:42,491 - validation - INFO - run_all_checks:244 - ----------------------------------------
+2026-07-20 20:52:42,492 - validation - INFO - validate_schema:109 - [external_scores] Schema validation passed
+2026-07-20 20:52:42,493 - validation - INFO - check_missing_values:134 - [external_scores] Total missing values: 0
+2026-07-20 20:52:42,494 - validation - INFO - check_duplicates:165 - [external_scores] Duplicates: 0 total, 0 by PK
+2026-07-20 20:52:42,505 - validation - INFO - run_all_checks:264 - [external_scores] Quality Score: 100.0/100
+2026-07-20 20:52:42,505 - validation - INFO - run_all_checks:265 - [external_scores] Issues: 0 (0 critical, 0 warnings)
+2026-07-20 20:52:42,511 - validation - INFO - validate_all_sources:341 - ============================================================
+2026-07-20 20:52:42,511 - validation - INFO - validate_all_sources:342 - Validation complete. Report saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\processed\data_quality_report.json
+2026-07-20 20:52:42,512 - validation - INFO - validate_all_sources:343 - ============================================================
+2026-07-20 20:53:02,484 - preparation - INFO - prepare_all_data:346 - ============================================================
+2026-07-20 20:53:02,484 - preparation - INFO - prepare_all_data:347 - Starting Data Preparation Pipeline
+2026-07-20 20:53:02,484 - preparation - INFO - prepare_all_data:348 - ============================================================
+2026-07-20 20:53:02,485 - preparation - INFO - load_raw_data:41 - Loading raw data...
+2026-07-20 20:53:02,544 - preparation - INFO - load_raw_data:55 - Loaded - Transactions: 5050, Products: 200, Users: 500, Clickstream: 15000
+2026-07-20 20:53:02,544 - preparation - INFO - clean_transactions:61 - Cleaning transactions data...
+2026-07-20 20:53:02,548 - preparation - INFO - clean_transactions:68 - Removed 47 duplicate rows
+2026-07-20 20:53:02,550 - preparation - INFO - clean_transactions:73 - Removed rows with missing critical fields. Remaining: 4943
+2026-07-20 20:53:02,552 - preparation - INFO - clean_transactions:79 - Imputed 0 missing ratings with median: 4.0
+2026-07-20 20:53:02,565 - preparation - INFO - clean_transactions:97 - Transaction cleaning complete. Records: 5050 -> 4943
+2026-07-20 20:53:02,565 - preparation - INFO - clean_clickstream:103 - Cleaning clickstream data...
+2026-07-20 20:53:02,591 - preparation - INFO - clean_clickstream:122 - Clickstream cleaning complete. Records: 15000 -> 15000
+2026-07-20 20:53:02,592 - preparation - INFO - clean_products:128 - Cleaning products data...
+2026-07-20 20:53:02,596 - preparation - INFO - clean_products:144 - Product cleaning complete. Records: 200
+2026-07-20 20:53:02,596 - preparation - INFO - clean_users:150 - Cleaning user data...
+2026-07-20 20:53:02,604 - preparation - INFO - clean_users:170 - User cleaning complete. Records: 500
+2026-07-20 20:53:02,604 - preparation - INFO - perform_eda:176 - Performing Exploratory Data Analysis...
+2026-07-20 20:53:05,419 - preparation - INFO - perform_eda:270 - Sparsity Analysis: 500 users, 200 items, 4943 interactions, Sparsity: 0.9506
+2026-07-20 20:53:05,419 - preparation - INFO - perform_eda:273 - EDA plots saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\processed\plots
+2026-07-20 20:53:05,420 - preparation - INFO - save_prepared_data:277 - Saving prepared data...
+2026-07-20 20:53:05,513 - preparation - INFO - save_prepared_data:304 - Prepared data saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\processed
+2026-07-20 20:53:05,515 - preparation - INFO - prepare_all_data:368 - ============================================================
+2026-07-20 20:53:05,515 - preparation - INFO - prepare_all_data:369 - Data Preparation Pipeline Complete
+2026-07-20 20:53:05,515 - preparation - INFO - prepare_all_data:370 - ============================================================
+2026-07-20 20:53:41,478 - transformation - INFO - transform_all_data:357 - ============================================================
+2026-07-20 20:53:41,478 - transformation - INFO - transform_all_data:358 - Starting Feature Engineering Pipeline
+2026-07-20 20:53:41,478 - transformation - INFO - transform_all_data:359 - ============================================================
+2026-07-20 20:53:41,479 - transformation - INFO - load_prepared_data:36 - Loading prepared data for feature engineering...
+2026-07-20 20:53:41,535 - transformation - INFO - load_prepared_data:44 - Prepared data loaded successfully
+2026-07-20 20:53:41,535 - transformation - INFO - create_user_features:48 - Creating user features...
+2026-07-20 20:53:41,659 - transformation - INFO - create_user_features:113 - Created 500 user feature records with 25 features
+2026-07-20 20:53:41,660 - transformation - INFO - create_item_features:119 - Creating item features...
+2026-07-20 20:53:41,706 - transformation - INFO - create_item_features:173 - Created 200 item feature records with 26 features
+2026-07-20 20:53:41,707 - transformation - INFO - create_interaction_features:179 - Creating interaction features...
+2026-07-20 20:53:43,385 - transformation - INFO - create_interaction_features:218 - Created 18123 interaction feature records
+2026-07-20 20:53:43,386 - transformation - INFO - create_user_item_matrix:223 - Creating user-item interaction matrix...
+2026-07-20 20:53:43,390 - transformation - INFO - create_user_item_matrix:252 - User-item matrix: (500, 200), Sparsity: 0.8188
+2026-07-20 20:53:43,391 - transformation - INFO - save_features:258 - Saving engineered features...
+2026-07-20 20:53:43,477 - transformation - INFO - save_features:296 - Features saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\features
+2026-07-20 20:53:43,479 - transformation - INFO - transform_all_data:388 - ============================================================
+2026-07-20 20:53:43,479 - transformation - INFO - transform_all_data:389 - Feature Engineering Pipeline Complete
+2026-07-20 20:53:43,479 - transformation - INFO - transform_all_data:390 - ============================================================
+2026-07-20 20:54:21,398 - training - INFO - train_and_evaluate:440 - ============================================================
+2026-07-20 20:54:21,398 - training - INFO - train_and_evaluate:441 - Starting Model Training Pipeline
+2026-07-20 20:54:21,399 - training - INFO - train_and_evaluate:442 - ============================================================
+2026-07-20 20:54:21,441 - training - INFO - train_test_split_interactions:263 - Train/Test split: 14498/3625
+2026-07-20 20:54:21,441 - training - INFO - fit:87 - Training Collaborative Filtering (SVD) model...
+2026-07-20 20:54:21,803 - training - INFO - fit:126 - SVD training complete. Factors: 50, Matrix: 500x200
+2026-07-20 20:54:21,804 - training - INFO - fit:171 - Training Content-Based Filtering model...
+2026-07-20 20:54:21,901 - training - INFO - fit:192 - Content-based model trained. Items: 200, Features used: 21
+2026-07-20 20:54:21,902 - training - INFO - evaluate_models:278 - Evaluating models...
+2026-07-20 20:54:22,038 - training - INFO - evaluate_models:290 - CF Results - Precision@10: 0.0340, Recall@10: 0.0428, NDCG@10: 0.0329, RMSE: 3.1904
+2026-07-20 20:54:22,336 - training - INFO - evaluate_models:299 - CB Results - Precision@10: 0.0450, Recall@10: 0.0677, NDCG@10: 0.0487
+2026-07-20 20:54:22,336 - training - INFO - save_models:391 - Saving models...
+2026-07-20 20:54:22,344 - training - INFO - save_models:398 - CF model saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\models\cf_svd_model.pkl
+2026-07-20 20:54:22,349 - training - INFO - save_models:405 - CB model saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\models\cb_model.pkl
+2026-07-20 20:54:22,353 - training - INFO - save_models:435 - Model metadata saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\models\model_metadata.json
+2026-07-20 20:54:22,355 - training - INFO - train_and_evaluate:475 - ============================================================
+2026-07-20 20:54:22,356 - training - INFO - train_and_evaluate:476 - Model Training Pipeline Complete
+2026-07-20 20:54:22,356 - training - INFO - train_and_evaluate:477 - ============================================================
+2026-07-20 20:56:18,047 - orchestration - INFO - run:112 - ======================================================================
+2026-07-20 20:56:18,048 - orchestration - INFO - run:113 - RECOMART PIPELINE - Run ID: 20260720_205618
+2026-07-20 20:56:18,048 - orchestration - INFO - run:114 - Started at: 2026-07-20 20:56:18
+2026-07-20 20:56:18,048 - orchestration - INFO - run:115 - ======================================================================
+2026-07-20 20:56:18,065 - orchestration - INFO - run:127 - Step 1/7: GENERATE_DATA
+2026-07-20 20:56:18,068 - orchestration - INFO - task_generate_data:27 - [TASK] Generating synthetic data...
+2026-07-20 20:56:20,392 - data_generator - INFO - save_data:157 - Starting synthetic data generation...
+2026-07-20 20:56:21,417 - data_generator - INFO - save_data:168 - Generated 500 user records
+2026-07-20 20:56:21,427 - data_generator - INFO - save_data:171 - Generated 200 product records
+2026-07-20 20:56:21,457 - data_generator - INFO - save_data:174 - Generated 5050 transaction records
+2026-07-20 20:56:21,531 - data_generator - INFO - save_data:177 - Generated 15000 clickstream events
+2026-07-20 20:56:21,536 - data_generator - INFO - save_data:180 - Generated 200 external API records
+2026-07-20 20:56:21,536 - data_generator - INFO - save_data:182 - Synthetic data generation completed successfully!
+2026-07-20 20:56:21,542 - orchestration - INFO - run:127 - Step 2/7: INGEST_DATA
+2026-07-20 20:56:21,544 - orchestration - INFO - task_ingest_data:35 - [TASK] Running data ingestion...
+2026-07-20 20:56:22,170 - ingestion - INFO - ingest_all_sources:175 - ============================================================
+2026-07-20 20:56:22,170 - ingestion - INFO - ingest_all_sources:176 - Starting data ingestion pipeline...
+2026-07-20 20:56:22,171 - ingestion - INFO - ingest_all_sources:177 - ============================================================
+2026-07-20 20:56:22,240 - ingestion - INFO - ingest_all_sources:195 - Clickstream: 15000 records ingested
+2026-07-20 20:56:22,275 - ingestion - INFO - ingest_all_sources:220 - Transactions: 5050 records ingested
+2026-07-20 20:56:22,283 - ingestion - INFO - ingest_all_sources:245 - Products: 200 records ingested
+2026-07-20 20:56:22,293 - ingestion - INFO - ingest_all_sources:270 - External API: 200 records ingested
+2026-07-20 20:56:22,302 - ingestion - INFO - ingest_all_sources:296 - ============================================================
+2026-07-20 20:56:22,302 - ingestion - INFO - ingest_all_sources:297 - Data ingestion completed. Report saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\raw\ingestion_report.json
+2026-07-20 20:56:22,302 - ingestion - INFO - ingest_all_sources:298 - ============================================================
+2026-07-20 20:56:22,309 - orchestration - INFO - run:127 - Step 3/7: VALIDATE_DATA
+2026-07-20 20:56:22,312 - orchestration - INFO - task_validate_data:43 - [TASK] Running data validation...
+2026-07-20 20:56:22,324 - validation - INFO - validate_all_sources:302 - ============================================================
+2026-07-20 20:56:22,324 - validation - INFO - validate_all_sources:303 - Starting Data Validation Pipeline
+2026-07-20 20:56:22,325 - validation - INFO - validate_all_sources:304 - ============================================================
+2026-07-20 20:56:22,351 - validation - INFO - run_all_checks:243 - Running validation for: transactions
+2026-07-20 20:56:22,351 - validation - INFO - run_all_checks:244 - ----------------------------------------
+2026-07-20 20:56:22,352 - validation - INFO - validate_schema:109 - [transactions] Schema validation passed
+2026-07-20 20:56:22,359 - validation - INFO - check_missing_values:134 - [transactions] Total missing values: 364
+2026-07-20 20:56:22,367 - validation - INFO - check_duplicates:165 - [transactions] Duplicates: 47 total, 50 by PK
+2026-07-20 20:56:43,084 - orchestration - INFO - run:112 - ======================================================================
+2026-07-20 20:56:43,085 - orchestration - INFO - run:113 - RECOMART PIPELINE - Run ID: 20260720_205643
+2026-07-20 20:56:43,085 - orchestration - INFO - run:114 - Started at: 2026-07-20 20:56:43
+2026-07-20 20:56:43,086 - orchestration - INFO - run:115 - ======================================================================
+2026-07-20 20:56:43,102 - orchestration - INFO - run:127 - Step 1/7: GENERATE_DATA
+2026-07-20 20:56:43,106 - orchestration - INFO - task_generate_data:27 - [TASK] Generating synthetic data...
+2026-07-20 20:56:44,805 - data_generator - INFO - save_data:157 - Starting synthetic data generation...
+2026-07-20 20:56:45,494 - data_generator - INFO - save_data:168 - Generated 500 user records
+2026-07-20 20:56:45,501 - data_generator - INFO - save_data:171 - Generated 200 product records
+2026-07-20 20:56:45,530 - data_generator - INFO - save_data:174 - Generated 5050 transaction records
+2026-07-20 20:56:45,594 - data_generator - INFO - save_data:177 - Generated 15000 clickstream events
+2026-07-20 20:56:45,601 - data_generator - INFO - save_data:180 - Generated 200 external API records
+2026-07-20 20:56:45,602 - data_generator - INFO - save_data:182 - Synthetic data generation completed successfully!
+2026-07-20 20:56:45,606 - orchestration - INFO - run:142 - [OK] generate_data completed in 2.5s
+2026-07-20 20:56:45,611 - orchestration - INFO - run:127 - Step 2/7: INGEST_DATA
+2026-07-20 20:56:45,615 - orchestration - INFO - task_ingest_data:35 - [TASK] Running data ingestion...
+2026-07-20 20:56:45,936 - ingestion - INFO - ingest_all_sources:175 - ============================================================
+2026-07-20 20:56:45,937 - ingestion - INFO - ingest_all_sources:176 - Starting data ingestion pipeline...
+2026-07-20 20:56:45,937 - ingestion - INFO - ingest_all_sources:177 - ============================================================
+2026-07-20 20:56:45,985 - ingestion - INFO - ingest_all_sources:195 - Clickstream: 15000 records ingested
+2026-07-20 20:56:46,005 - ingestion - INFO - ingest_all_sources:220 - Transactions: 5050 records ingested
+2026-07-20 20:56:46,012 - ingestion - INFO - ingest_all_sources:245 - Products: 200 records ingested
+2026-07-20 20:56:46,019 - ingestion - INFO - ingest_all_sources:270 - External API: 200 records ingested
+2026-07-20 20:56:46,022 - ingestion - INFO - ingest_all_sources:296 - ============================================================
+2026-07-20 20:56:46,023 - ingestion - INFO - ingest_all_sources:297 - Data ingestion completed. Report saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\raw\ingestion_report.json
+2026-07-20 20:56:46,023 - ingestion - INFO - ingest_all_sources:298 - ============================================================
+2026-07-20 20:56:46,024 - orchestration - INFO - run:142 - [OK] ingest_data completed in 0.41s
+2026-07-20 20:56:46,027 - orchestration - INFO - run:127 - Step 3/7: VALIDATE_DATA
+2026-07-20 20:56:46,031 - orchestration - INFO - task_validate_data:43 - [TASK] Running data validation...
+2026-07-20 20:56:46,038 - validation - INFO - validate_all_sources:302 - ============================================================
+2026-07-20 20:56:46,039 - validation - INFO - validate_all_sources:303 - Starting Data Validation Pipeline
+2026-07-20 20:56:46,039 - validation - INFO - validate_all_sources:304 - ============================================================
+2026-07-20 20:56:46,061 - validation - INFO - run_all_checks:243 - Running validation for: transactions
+2026-07-20 20:56:46,061 - validation - INFO - run_all_checks:244 - ----------------------------------------
+2026-07-20 20:56:46,062 - validation - INFO - validate_schema:109 - [transactions] Schema validation passed
+2026-07-20 20:56:46,066 - validation - INFO - check_missing_values:134 - [transactions] Total missing values: 364
+2026-07-20 20:56:46,074 - validation - INFO - check_duplicates:165 - [transactions] Duplicates: 47 total, 50 by PK
+2026-07-20 20:56:46,098 - validation - INFO - run_all_checks:264 - [transactions] Quality Score: 82.0/100
+2026-07-20 20:56:46,098 - validation - INFO - run_all_checks:265 - [transactions] Issues: 5 (1 critical, 4 warnings)
+2026-07-20 20:56:46,105 - validation - INFO - run_all_checks:243 - Running validation for: products
+2026-07-20 20:56:46,106 - validation - INFO - run_all_checks:244 - ----------------------------------------
+2026-07-20 20:56:46,107 - validation - INFO - validate_schema:109 - [products] Schema validation passed
+2026-07-20 20:56:46,109 - validation - INFO - check_missing_values:134 - [products] Total missing values: 0
+2026-07-20 20:56:46,112 - validation - INFO - check_duplicates:165 - [products] Duplicates: 0 total, 0 by PK
+2026-07-20 20:56:46,126 - validation - INFO - run_all_checks:264 - [products] Quality Score: 100.0/100
+2026-07-20 20:56:46,126 - validation - INFO - run_all_checks:265 - [products] Issues: 0 (0 critical, 0 warnings)
+2026-07-20 20:56:46,177 - validation - INFO - run_all_checks:243 - Running validation for: clickstream
+2026-07-20 20:56:46,178 - validation - INFO - run_all_checks:244 - ----------------------------------------
+2026-07-20 20:56:46,180 - validation - INFO - validate_schema:109 - [clickstream] Schema validation passed
+2026-07-20 20:56:46,188 - validation - INFO - check_missing_values:134 - [clickstream] Total missing values: 0
+2026-07-20 20:56:46,211 - validation - INFO - check_duplicates:165 - [clickstream] Duplicates: 0 total, 0 by PK
+2026-07-20 20:56:46,248 - validation - INFO - run_all_checks:264 - [clickstream] Quality Score: 100.0/100
+2026-07-20 20:56:46,249 - validation - INFO - run_all_checks:265 - [clickstream] Issues: 0 (0 critical, 0 warnings)
+2026-07-20 20:56:46,256 - validation - INFO - run_all_checks:243 - Running validation for: external_scores
+2026-07-20 20:56:46,257 - validation - INFO - run_all_checks:244 - ----------------------------------------
+2026-07-20 20:56:46,258 - validation - INFO - validate_schema:109 - [external_scores] Schema validation passed
+2026-07-20 20:56:46,260 - validation - INFO - check_missing_values:134 - [external_scores] Total missing values: 0
+2026-07-20 20:56:46,263 - validation - INFO - check_duplicates:165 - [external_scores] Duplicates: 0 total, 0 by PK
+2026-07-20 20:56:46,281 - validation - INFO - run_all_checks:264 - [external_scores] Quality Score: 100.0/100
+2026-07-20 20:56:46,282 - validation - INFO - run_all_checks:265 - [external_scores] Issues: 0 (0 critical, 0 warnings)
+2026-07-20 20:56:46,288 - validation - INFO - validate_all_sources:341 - ============================================================
+2026-07-20 20:56:46,288 - validation - INFO - validate_all_sources:342 - Validation complete. Report saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\processed\data_quality_report.json
+2026-07-20 20:56:46,289 - validation - INFO - validate_all_sources:343 - ============================================================
+2026-07-20 20:56:46,293 - orchestration - INFO - run:142 - [OK] validate_data completed in 0.26s
+2026-07-20 20:56:46,297 - orchestration - INFO - run:127 - Step 4/7: PREPARE_DATA
+2026-07-20 20:56:46,301 - orchestration - INFO - task_prepare_data:51 - [TASK] Running data preparation...
+2026-07-20 20:56:49,774 - preparation - INFO - prepare_all_data:346 - ============================================================
+2026-07-20 20:56:49,775 - preparation - INFO - prepare_all_data:347 - Starting Data Preparation Pipeline
+2026-07-20 20:56:49,775 - preparation - INFO - prepare_all_data:348 - ============================================================
+2026-07-20 20:56:49,777 - preparation - INFO - load_raw_data:41 - Loading raw data...
+2026-07-20 20:56:49,858 - preparation - INFO - load_raw_data:55 - Loaded - Transactions: 5050, Products: 200, Users: 500, Clickstream: 15000
+2026-07-20 20:56:49,858 - preparation - INFO - clean_transactions:61 - Cleaning transactions data...
+2026-07-20 20:56:49,865 - preparation - INFO - clean_transactions:68 - Removed 47 duplicate rows
+2026-07-20 20:56:49,867 - preparation - INFO - clean_transactions:73 - Removed rows with missing critical fields. Remaining: 4943
+2026-07-20 20:56:49,870 - preparation - INFO - clean_transactions:79 - Imputed 0 missing ratings with median: 4.0
+2026-07-20 20:56:49,890 - preparation - INFO - clean_transactions:97 - Transaction cleaning complete. Records: 5050 -> 4943
+2026-07-20 20:56:49,892 - preparation - INFO - clean_clickstream:103 - Cleaning clickstream data...
+2026-07-20 20:56:49,929 - preparation - INFO - clean_clickstream:122 - Clickstream cleaning complete. Records: 15000 -> 15000
+2026-07-20 20:56:49,930 - preparation - INFO - clean_products:128 - Cleaning products data...
+2026-07-20 20:56:49,934 - preparation - INFO - clean_products:144 - Product cleaning complete. Records: 200
+2026-07-20 20:56:49,935 - preparation - INFO - clean_users:150 - Cleaning user data...
+2026-07-20 20:56:49,944 - preparation - INFO - clean_users:170 - User cleaning complete. Records: 500
+2026-07-20 20:56:49,944 - preparation - INFO - perform_eda:176 - Performing Exploratory Data Analysis...
+2026-07-20 20:56:55,468 - preparation - INFO - perform_eda:270 - Sparsity Analysis: 500 users, 200 items, 4943 interactions, Sparsity: 0.9506
+2026-07-20 20:56:55,469 - preparation - INFO - perform_eda:273 - EDA plots saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\processed\plots
+2026-07-20 20:56:55,469 - preparation - INFO - save_prepared_data:277 - Saving prepared data...
+2026-07-20 20:56:55,609 - preparation - INFO - save_prepared_data:304 - Prepared data saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\processed
+2026-07-20 20:56:55,613 - preparation - INFO - prepare_all_data:368 - ============================================================
+2026-07-20 20:56:55,613 - preparation - INFO - prepare_all_data:369 - Data Preparation Pipeline Complete
+2026-07-20 20:56:55,614 - preparation - INFO - prepare_all_data:370 - ============================================================
+2026-07-20 20:56:55,615 - orchestration - INFO - run:142 - [OK] prepare_data completed in 9.31s
+2026-07-20 20:56:55,618 - orchestration - INFO - run:127 - Step 5/7: TRANSFORM_DATA
+2026-07-20 20:56:55,622 - orchestration - INFO - task_transform_data:59 - [TASK] Running feature engineering...
+2026-07-20 20:56:55,631 - transformation - INFO - transform_all_data:357 - ============================================================
+2026-07-20 20:56:55,632 - transformation - INFO - transform_all_data:358 - Starting Feature Engineering Pipeline
+2026-07-20 20:56:55,633 - transformation - INFO - transform_all_data:359 - ============================================================
+2026-07-20 20:56:55,633 - transformation - INFO - load_prepared_data:36 - Loading prepared data for feature engineering...
+2026-07-20 20:56:55,723 - transformation - INFO - load_prepared_data:44 - Prepared data loaded successfully
+2026-07-20 20:56:55,724 - transformation - INFO - create_user_features:48 - Creating user features...
+2026-07-20 20:56:56,063 - transformation - INFO - create_user_features:113 - Created 500 user feature records with 25 features
+2026-07-20 20:56:56,064 - transformation - INFO - create_item_features:119 - Creating item features...
+2026-07-20 20:56:56,212 - transformation - INFO - create_item_features:173 - Created 200 item feature records with 26 features
+2026-07-20 20:56:56,213 - transformation - INFO - create_interaction_features:179 - Creating interaction features...
+2026-07-20 20:57:00,936 - transformation - INFO - create_interaction_features:218 - Created 18123 interaction feature records
+2026-07-20 20:57:00,937 - transformation - INFO - create_user_item_matrix:223 - Creating user-item interaction matrix...
+2026-07-20 20:57:00,944 - transformation - INFO - create_user_item_matrix:252 - User-item matrix: (500, 200), Sparsity: 0.8188
+2026-07-20 20:57:00,945 - transformation - INFO - save_features:258 - Saving engineered features...
+2026-07-20 20:57:01,110 - transformation - INFO - save_features:296 - Features saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\features
+2026-07-20 20:57:01,113 - transformation - INFO - transform_all_data:388 - ============================================================
+2026-07-20 20:57:01,114 - transformation - INFO - transform_all_data:389 - Feature Engineering Pipeline Complete
+2026-07-20 20:57:01,115 - transformation - INFO - transform_all_data:390 - ============================================================
+2026-07-20 20:57:01,117 - orchestration - INFO - run:142 - [OK] transform_data completed in 5.5s
+2026-07-20 20:57:01,122 - orchestration - INFO - run:127 - Step 6/7: FEATURE_STORE
+2026-07-20 20:57:01,126 - orchestration - INFO - task_feature_store:67 - [TASK] Running feature store pipeline...
+2026-07-20 20:57:01,176 - feature_store - INFO - run_feature_store:270 - ============================================================
+2026-07-20 20:57:01,177 - feature_store - INFO - run_feature_store:271 - Starting Feature Store Pipeline
+2026-07-20 20:57:01,177 - feature_store - INFO - run_feature_store:272 - ============================================================
+2026-07-20 20:57:01,178 - feature_store - INFO - ingest_features:109 - Ingesting features into feature store...
+2026-07-20 20:57:01,187 - feature_store - INFO - ingest_features:117 - Loaded 500 user feature records
+2026-07-20 20:57:01,195 - feature_store - INFO - ingest_features:121 - Loaded 200 item feature records
+2026-07-20 20:57:01,229 - feature_store - INFO - ingest_features:125 - Loaded 18123 interaction feature records
+2026-07-20 20:57:01,229 - feature_store - INFO - register_all_features:129 - Registering feature definitions...
+2026-07-20 20:57:01,234 - feature_store - INFO - register_feature:64 - Registered feature: total_transactions
+2026-07-20 20:57:01,239 - feature_store - INFO - register_feature:64 - Registered feature: avg_rating_given
+2026-07-20 20:57:01,244 - feature_store - INFO - register_feature:64 - Registered feature: unique_products_bought
+2026-07-20 20:57:01,248 - feature_store - INFO - register_feature:64 - Registered feature: purchase_frequency
+2026-07-20 20:57:01,251 - feature_store - INFO - register_feature:64 - Registered feature: engagement_score
+2026-07-20 20:57:01,255 - feature_store - INFO - register_feature:64 - Registered feature: conversion_rate
+2026-07-20 20:57:01,259 - feature_store - INFO - register_feature:64 - Registered feature: days_since_last_purchase
+2026-07-20 20:57:01,264 - feature_store - INFO - register_feature:64 - Registered feature: total_purchases
+2026-07-20 20:57:01,268 - feature_store - INFO - register_feature:64 - Registered feature: avg_rating_received
+2026-07-20 20:57:01,273 - feature_store - INFO - register_feature:64 - Registered feature: purchase_popularity
+2026-07-20 20:57:01,277 - feature_store - INFO - register_feature:64 - Registered feature: view_to_purchase_ratio
+2026-07-20 20:57:01,282 - feature_store - INFO - register_feature:64 - Registered feature: sentiment_score
+2026-07-20 20:57:01,286 - feature_store - INFO - register_feature:64 - Registered feature: popularity_score
+2026-07-20 20:57:01,291 - feature_store - INFO - register_feature:64 - Registered feature: price_normalized
+2026-07-20 20:57:01,296 - feature_store - INFO - register_feature:64 - Registered feature: avg_rating
+2026-07-20 20:57:01,301 - feature_store - INFO - register_feature:64 - Registered feature: num_interactions
+2026-07-20 20:57:01,306 - feature_store - INFO - register_feature:64 - Registered feature: interaction_score
+2026-07-20 20:57:01,311 - feature_store - INFO - register_feature:64 - Registered feature: view_count
+2026-07-20 20:57:01,312 - feature_store - INFO - register_all_features:165 - Registered 18 feature definitions
+2026-07-20 20:57:01,525 - feature_store - INFO - register_version:78 - Registered version: v20260720_205701
+2026-07-20 20:57:01,526 - feature_store - INFO - create_version:197 - Created feature version: v20260720_205701
+2026-07-20 20:57:01,527 - feature_store - INFO - get_features_for_training:202 - Retrieving features for training (version: v20260720_205701)
+2026-07-20 20:57:01,585 - feature_store - INFO - get_features_for_training:227 - Retrieved 3 feature sets
+2026-07-20 20:57:01,588 - feature_store - INFO - run_feature_store:287 - Retrieved 3 feature sets for training
+2026-07-20 20:57:01,598 - feature_store - INFO - run_feature_store:294 - Sample user features for U0001: 25 features retrieved
+2026-07-20 20:57:01,603 - feature_store - INFO - run_feature_store:299 - ============================================================
+2026-07-20 20:57:01,605 - feature_store - INFO - run_feature_store:300 - Feature Store Pipeline Complete
+2026-07-20 20:57:01,606 - feature_store - INFO - run_feature_store:301 - ============================================================
+2026-07-20 20:57:01,613 - orchestration - INFO - run:142 - [OK] feature_store completed in 0.49s
+2026-07-20 20:57:01,631 - orchestration - INFO - run:127 - Step 7/7: TRAIN_MODEL
+2026-07-20 20:57:01,643 - orchestration - INFO - task_train_model:75 - [TASK] Running model training...
+2026-07-20 20:57:02,672 - training - INFO - train_and_evaluate:440 - ============================================================
+2026-07-20 20:57:02,673 - training - INFO - train_and_evaluate:441 - Starting Model Training Pipeline
+2026-07-20 20:57:02,673 - training - INFO - train_and_evaluate:442 - ============================================================
+2026-07-20 20:57:02,740 - training - INFO - train_test_split_interactions:263 - Train/Test split: 14498/3625
+2026-07-20 20:57:02,741 - training - INFO - fit:87 - Training Collaborative Filtering (SVD) model...
+2026-07-20 20:57:03,698 - training - INFO - fit:126 - SVD training complete. Factors: 50, Matrix: 500x200
+2026-07-20 20:57:03,699 - training - INFO - fit:171 - Training Content-Based Filtering model...
+2026-07-20 20:57:03,819 - training - INFO - fit:192 - Content-based model trained. Items: 200, Features used: 21
+2026-07-20 20:57:03,820 - training - INFO - evaluate_models:278 - Evaluating models...
+2026-07-20 20:57:04,081 - training - INFO - evaluate_models:290 - CF Results - Precision@10: 0.0250, Recall@10: 0.0406, NDCG@10: 0.0316, RMSE: 3.2465
+2026-07-20 20:57:04,547 - training - INFO - evaluate_models:299 - CB Results - Precision@10: 0.0410, Recall@10: 0.0548, NDCG@10: 0.0438
+2026-07-20 20:57:04,547 - training - INFO - save_models:391 - Saving models...
+2026-07-20 20:57:04,556 - training - INFO - save_models:398 - CF model saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\models\cf_svd_model.pkl
+2026-07-20 20:57:04,562 - training - INFO - save_models:405 - CB model saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\models\cb_model.pkl
+2026-07-20 20:57:04,566 - training - INFO - save_models:435 - Model metadata saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\models\model_metadata.json
+2026-07-20 20:57:04,570 - training - INFO - train_and_evaluate:475 - ============================================================
+2026-07-20 20:57:04,570 - training - INFO - train_and_evaluate:476 - Model Training Pipeline Complete
+2026-07-20 20:57:04,571 - training - INFO - train_and_evaluate:477 - ============================================================
+2026-07-20 20:57:04,574 - orchestration - INFO - run:142 - [OK] train_model completed in 2.93s
+2026-07-20 20:57:04,583 - orchestration - INFO - run:178 - 
+======================================================================
+2026-07-20 20:57:04,583 - orchestration - INFO - run:179 - PIPELINE COMPLETE - Status: success
+2026-07-20 20:57:04,584 - orchestration - INFO - run:180 - Duration: 21.49s
+2026-07-20 20:57:04,585 - orchestration - INFO - run:181 - Tasks: 7/7 succeeded
+2026-07-20 20:57:04,585 - orchestration - INFO - run:182 - Report: C:\Users\biswajits\Desktop\RecoMart-Pipeline\logs\pipeline_run_20260720_205643.json
+2026-07-20 20:57:04,586 - orchestration - INFO - run:183 - ======================================================================
+2026-07-20 20:58:43,052 - orchestration - INFO - run:112 - ======================================================================
+2026-07-20 20:58:43,053 - orchestration - INFO - run:113 - RECOMART PIPELINE - Run ID: 20260720_205843
+2026-07-20 20:58:43,054 - orchestration - INFO - run:114 - Started at: 2026-07-20 20:58:43
+2026-07-20 20:58:43,055 - orchestration - INFO - run:115 - ======================================================================
+2026-07-20 20:58:43,055 - orchestration - INFO - run:126 - 
+============================================================
+2026-07-20 20:58:43,055 - orchestration - INFO - run:127 - Step 1/7: GENERATE_DATA
+2026-07-20 20:58:43,056 - orchestration - INFO - run:128 - ============================================================
+2026-07-20 20:58:43,057 - orchestration - INFO - task_generate_data:27 - [TASK] Generating synthetic data...
+2026-07-20 20:58:45,354 - data_generator - INFO - save_data:157 - Starting synthetic data generation...
+2026-07-20 20:58:45,995 - data_generator - INFO - save_data:168 - Generated 500 user records
+2026-07-20 20:58:46,002 - data_generator - INFO - save_data:171 - Generated 200 product records
+2026-07-20 20:58:46,027 - data_generator - INFO - save_data:174 - Generated 5050 transaction records
+2026-07-20 20:58:46,097 - data_generator - INFO - save_data:177 - Generated 15000 clickstream events
+2026-07-20 20:58:46,104 - data_generator - INFO - save_data:180 - Generated 200 external API records
+2026-07-20 20:58:46,105 - data_generator - INFO - save_data:182 - Synthetic data generation completed successfully!
+2026-07-20 20:58:46,109 - orchestration - INFO - run:142 - [OK] generate_data completed in 3.05s
+2026-07-20 20:58:46,110 - orchestration - INFO - run:126 - 
+============================================================
+2026-07-20 20:58:46,110 - orchestration - INFO - run:127 - Step 2/7: INGEST_DATA
+2026-07-20 20:58:46,111 - orchestration - INFO - run:128 - ============================================================
+2026-07-20 20:58:46,111 - orchestration - INFO - task_ingest_data:35 - [TASK] Running data ingestion...
+2026-07-20 20:58:46,465 - ingestion - INFO - ingest_all_sources:175 - ============================================================
+2026-07-20 20:58:46,466 - ingestion - INFO - ingest_all_sources:176 - Starting data ingestion pipeline...
+2026-07-20 20:58:46,466 - ingestion - INFO - ingest_all_sources:177 - ============================================================
+2026-07-20 20:58:46,511 - ingestion - INFO - ingest_all_sources:195 - Clickstream: 15000 records ingested
+2026-07-20 20:58:46,533 - ingestion - INFO - ingest_all_sources:220 - Transactions: 5050 records ingested
+2026-07-20 20:58:46,541 - ingestion - INFO - ingest_all_sources:245 - Products: 200 records ingested
+2026-07-20 20:58:46,547 - ingestion - INFO - ingest_all_sources:270 - External API: 200 records ingested
+2026-07-20 20:58:46,551 - ingestion - INFO - ingest_all_sources:296 - ============================================================
+2026-07-20 20:58:46,552 - ingestion - INFO - ingest_all_sources:297 - Data ingestion completed. Report saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\raw\ingestion_report.json
+2026-07-20 20:58:46,553 - ingestion - INFO - ingest_all_sources:298 - ============================================================
+2026-07-20 20:58:46,553 - orchestration - INFO - run:142 - [OK] ingest_data completed in 0.44s
+2026-07-20 20:58:46,554 - orchestration - INFO - run:126 - 
+============================================================
+2026-07-20 20:58:46,554 - orchestration - INFO - run:127 - Step 3/7: VALIDATE_DATA
+2026-07-20 20:58:46,555 - orchestration - INFO - run:128 - ============================================================
+2026-07-20 20:58:46,555 - orchestration - INFO - task_validate_data:43 - [TASK] Running data validation...
+2026-07-20 20:58:46,565 - validation - INFO - validate_all_sources:302 - ============================================================
+2026-07-20 20:58:46,565 - validation - INFO - validate_all_sources:303 - Starting Data Validation Pipeline
+2026-07-20 20:58:46,566 - validation - INFO - validate_all_sources:304 - ============================================================
+2026-07-20 20:58:46,587 - validation - INFO - run_all_checks:243 - Running validation for: transactions
+2026-07-20 20:58:46,588 - validation - INFO - run_all_checks:244 - ----------------------------------------
+2026-07-20 20:58:46,588 - validation - INFO - validate_schema:109 - [transactions] Schema validation passed
+2026-07-20 20:58:46,593 - validation - INFO - check_missing_values:134 - [transactions] Total missing values: 364
+2026-07-20 20:58:46,601 - validation - INFO - check_duplicates:165 - [transactions] Duplicates: 47 total, 50 by PK
+2026-07-20 20:58:46,624 - validation - INFO - run_all_checks:264 - [transactions] Quality Score: 82.0/100
+2026-07-20 20:58:46,625 - validation - INFO - run_all_checks:265 - [transactions] Issues: 5 (1 critical, 4 warnings)
+2026-07-20 20:58:46,633 - validation - INFO - run_all_checks:243 - Running validation for: products
+2026-07-20 20:58:46,634 - validation - INFO - run_all_checks:244 - ----------------------------------------
+2026-07-20 20:58:46,635 - validation - INFO - validate_schema:109 - [products] Schema validation passed
+2026-07-20 20:58:46,637 - validation - INFO - check_missing_values:134 - [products] Total missing values: 0
+2026-07-20 20:58:46,640 - validation - INFO - check_duplicates:165 - [products] Duplicates: 0 total, 0 by PK
+2026-07-20 20:58:46,658 - validation - INFO - run_all_checks:264 - [products] Quality Score: 100.0/100
+2026-07-20 20:58:46,658 - validation - INFO - run_all_checks:265 - [products] Issues: 0 (0 critical, 0 warnings)
+2026-07-20 20:58:46,716 - validation - INFO - run_all_checks:243 - Running validation for: clickstream
+2026-07-20 20:58:46,717 - validation - INFO - run_all_checks:244 - ----------------------------------------
+2026-07-20 20:58:46,718 - validation - INFO - validate_schema:109 - [clickstream] Schema validation passed
+2026-07-20 20:58:46,727 - validation - INFO - check_missing_values:134 - [clickstream] Total missing values: 0
+2026-07-20 20:58:46,756 - validation - INFO - check_duplicates:165 - [clickstream] Duplicates: 0 total, 0 by PK
+2026-07-20 20:58:46,807 - validation - INFO - run_all_checks:264 - [clickstream] Quality Score: 100.0/100
+2026-07-20 20:58:46,808 - validation - INFO - run_all_checks:265 - [clickstream] Issues: 0 (0 critical, 0 warnings)
+2026-07-20 20:58:46,822 - validation - INFO - run_all_checks:243 - Running validation for: external_scores
+2026-07-20 20:58:46,822 - validation - INFO - run_all_checks:244 - ----------------------------------------
+2026-07-20 20:58:46,823 - validation - INFO - validate_schema:109 - [external_scores] Schema validation passed
+2026-07-20 20:58:46,826 - validation - INFO - check_missing_values:134 - [external_scores] Total missing values: 0
+2026-07-20 20:58:46,830 - validation - INFO - check_duplicates:165 - [external_scores] Duplicates: 0 total, 0 by PK
+2026-07-20 20:58:46,859 - validation - INFO - run_all_checks:264 - [external_scores] Quality Score: 100.0/100
+2026-07-20 20:58:46,860 - validation - INFO - run_all_checks:265 - [external_scores] Issues: 0 (0 critical, 0 warnings)
+2026-07-20 20:58:46,868 - validation - INFO - validate_all_sources:341 - ============================================================
+2026-07-20 20:58:46,869 - validation - INFO - validate_all_sources:342 - Validation complete. Report saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\processed\data_quality_report.json
+2026-07-20 20:58:46,870 - validation - INFO - validate_all_sources:343 - ============================================================
+2026-07-20 20:58:46,875 - orchestration - INFO - run:142 - [OK] validate_data completed in 0.32s
+2026-07-20 20:58:46,875 - orchestration - INFO - run:126 - 
+============================================================
+2026-07-20 20:58:46,877 - orchestration - INFO - run:127 - Step 4/7: PREPARE_DATA
+2026-07-20 20:58:46,878 - orchestration - INFO - run:128 - ============================================================
+2026-07-20 20:58:46,879 - orchestration - INFO - task_prepare_data:51 - [TASK] Running data preparation...
+2026-07-20 20:58:50,467 - preparation - INFO - prepare_all_data:346 - ============================================================
+2026-07-20 20:58:50,467 - preparation - INFO - prepare_all_data:347 - Starting Data Preparation Pipeline
+2026-07-20 20:58:50,468 - preparation - INFO - prepare_all_data:348 - ============================================================
+2026-07-20 20:58:50,469 - preparation - INFO - load_raw_data:41 - Loading raw data...
+2026-07-20 20:58:50,560 - preparation - INFO - load_raw_data:55 - Loaded - Transactions: 5050, Products: 200, Users: 500, Clickstream: 15000
+2026-07-20 20:58:50,561 - preparation - INFO - clean_transactions:61 - Cleaning transactions data...
+2026-07-20 20:58:50,570 - preparation - INFO - clean_transactions:68 - Removed 47 duplicate rows
+2026-07-20 20:58:50,575 - preparation - INFO - clean_transactions:73 - Removed rows with missing critical fields. Remaining: 4943
+2026-07-20 20:58:50,578 - preparation - INFO - clean_transactions:79 - Imputed 0 missing ratings with median: 4.0
+2026-07-20 20:58:50,598 - preparation - INFO - clean_transactions:97 - Transaction cleaning complete. Records: 5050 -> 4943
+2026-07-20 20:58:50,600 - preparation - INFO - clean_clickstream:103 - Cleaning clickstream data...
+2026-07-20 20:58:50,639 - preparation - INFO - clean_clickstream:122 - Clickstream cleaning complete. Records: 15000 -> 15000
+2026-07-20 20:58:50,640 - preparation - INFO - clean_products:128 - Cleaning products data...
+2026-07-20 20:58:50,645 - preparation - INFO - clean_products:144 - Product cleaning complete. Records: 200
+2026-07-20 20:58:50,647 - preparation - INFO - clean_users:150 - Cleaning user data...
+2026-07-20 20:58:50,656 - preparation - INFO - clean_users:170 - User cleaning complete. Records: 500
+2026-07-20 20:58:50,656 - preparation - INFO - perform_eda:176 - Performing Exploratory Data Analysis...
+2026-07-20 20:58:56,127 - preparation - INFO - perform_eda:270 - Sparsity Analysis: 500 users, 200 items, 4943 interactions, Sparsity: 0.9506
+2026-07-20 20:58:56,127 - preparation - INFO - perform_eda:273 - EDA plots saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\processed\plots
+2026-07-20 20:58:56,128 - preparation - INFO - save_prepared_data:277 - Saving prepared data...
+2026-07-20 20:58:56,279 - preparation - INFO - save_prepared_data:304 - Prepared data saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\processed
+2026-07-20 20:58:56,284 - preparation - INFO - prepare_all_data:368 - ============================================================
+2026-07-20 20:58:56,284 - preparation - INFO - prepare_all_data:369 - Data Preparation Pipeline Complete
+2026-07-20 20:58:56,285 - preparation - INFO - prepare_all_data:370 - ============================================================
+2026-07-20 20:58:56,286 - orchestration - INFO - run:142 - [OK] prepare_data completed in 9.41s
+2026-07-20 20:58:56,286 - orchestration - INFO - run:126 - 
+============================================================
+2026-07-20 20:58:56,286 - orchestration - INFO - run:127 - Step 5/7: TRANSFORM_DATA
+2026-07-20 20:58:56,287 - orchestration - INFO - run:128 - ============================================================
+2026-07-20 20:58:56,287 - orchestration - INFO - task_transform_data:59 - [TASK] Running feature engineering...
+2026-07-20 20:58:56,295 - transformation - INFO - transform_all_data:357 - ============================================================
+2026-07-20 20:58:56,295 - transformation - INFO - transform_all_data:358 - Starting Feature Engineering Pipeline
+2026-07-20 20:58:56,296 - transformation - INFO - transform_all_data:359 - ============================================================
+2026-07-20 20:58:56,296 - transformation - INFO - load_prepared_data:36 - Loading prepared data for feature engineering...
+2026-07-20 20:58:56,377 - transformation - INFO - load_prepared_data:44 - Prepared data loaded successfully
+2026-07-20 20:58:56,378 - transformation - INFO - create_user_features:48 - Creating user features...
+2026-07-20 20:58:56,710 - transformation - INFO - create_user_features:113 - Created 500 user feature records with 25 features
+2026-07-20 20:58:56,710 - transformation - INFO - create_item_features:119 - Creating item features...
+2026-07-20 20:58:56,820 - transformation - INFO - create_item_features:173 - Created 200 item feature records with 26 features
+2026-07-20 20:58:56,821 - transformation - INFO - create_interaction_features:179 - Creating interaction features...
+2026-07-20 20:59:01,334 - transformation - INFO - create_interaction_features:218 - Created 18123 interaction feature records
+2026-07-20 20:59:01,335 - transformation - INFO - create_user_item_matrix:223 - Creating user-item interaction matrix...
+2026-07-20 20:59:01,342 - transformation - INFO - create_user_item_matrix:252 - User-item matrix: (500, 200), Sparsity: 0.8188
+2026-07-20 20:59:01,343 - transformation - INFO - save_features:258 - Saving engineered features...
+2026-07-20 20:59:01,518 - transformation - INFO - save_features:296 - Features saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\features
+2026-07-20 20:59:01,521 - transformation - INFO - transform_all_data:388 - ============================================================
+2026-07-20 20:59:01,522 - transformation - INFO - transform_all_data:389 - Feature Engineering Pipeline Complete
+2026-07-20 20:59:01,522 - transformation - INFO - transform_all_data:390 - ============================================================
+2026-07-20 20:59:01,525 - orchestration - INFO - run:142 - [OK] transform_data completed in 5.24s
+2026-07-20 20:59:01,526 - orchestration - INFO - run:126 - 
+============================================================
+2026-07-20 20:59:01,526 - orchestration - INFO - run:127 - Step 6/7: FEATURE_STORE
+2026-07-20 20:59:01,527 - orchestration - INFO - run:128 - ============================================================
+2026-07-20 20:59:01,527 - orchestration - INFO - task_feature_store:67 - [TASK] Running feature store pipeline...
+2026-07-20 20:59:01,537 - feature_store - INFO - run_feature_store:270 - ============================================================
+2026-07-20 20:59:01,537 - feature_store - INFO - run_feature_store:271 - Starting Feature Store Pipeline
+2026-07-20 20:59:01,538 - feature_store - INFO - run_feature_store:272 - ============================================================
+2026-07-20 20:59:01,542 - feature_store - INFO - ingest_features:109 - Ingesting features into feature store...
+2026-07-20 20:59:01,556 - feature_store - INFO - ingest_features:117 - Loaded 500 user feature records
+2026-07-20 20:59:01,564 - feature_store - INFO - ingest_features:121 - Loaded 200 item feature records
+2026-07-20 20:59:01,603 - feature_store - INFO - ingest_features:125 - Loaded 18123 interaction feature records
+2026-07-20 20:59:01,605 - feature_store - INFO - register_all_features:129 - Registering feature definitions...
+2026-07-20 20:59:01,611 - feature_store - INFO - register_feature:64 - Registered feature: total_transactions
+2026-07-20 20:59:01,616 - feature_store - INFO - register_feature:64 - Registered feature: avg_rating_given
+2026-07-20 20:59:01,621 - feature_store - INFO - register_feature:64 - Registered feature: unique_products_bought
+2026-07-20 20:59:01,627 - feature_store - INFO - register_feature:64 - Registered feature: purchase_frequency
+2026-07-20 20:59:01,633 - feature_store - INFO - register_feature:64 - Registered feature: engagement_score
+2026-07-20 20:59:01,639 - feature_store - INFO - register_feature:64 - Registered feature: conversion_rate
+2026-07-20 20:59:01,644 - feature_store - INFO - register_feature:64 - Registered feature: days_since_last_purchase
+2026-07-20 20:59:01,650 - feature_store - INFO - register_feature:64 - Registered feature: total_purchases
+2026-07-20 20:59:01,655 - feature_store - INFO - register_feature:64 - Registered feature: avg_rating_received
+2026-07-20 20:59:01,659 - feature_store - INFO - register_feature:64 - Registered feature: purchase_popularity
+2026-07-20 20:59:01,664 - feature_store - INFO - register_feature:64 - Registered feature: view_to_purchase_ratio
+2026-07-20 20:59:01,672 - feature_store - INFO - register_feature:64 - Registered feature: sentiment_score
+2026-07-20 20:59:01,677 - feature_store - INFO - register_feature:64 - Registered feature: popularity_score
+2026-07-20 20:59:01,684 - feature_store - INFO - register_feature:64 - Registered feature: price_normalized
+2026-07-20 20:59:01,690 - feature_store - INFO - register_feature:64 - Registered feature: avg_rating
+2026-07-20 20:59:01,697 - feature_store - INFO - register_feature:64 - Registered feature: num_interactions
+2026-07-20 20:59:01,702 - feature_store - INFO - register_feature:64 - Registered feature: interaction_score
+2026-07-20 20:59:01,707 - feature_store - INFO - register_feature:64 - Registered feature: view_count
+2026-07-20 20:59:01,708 - feature_store - INFO - register_all_features:165 - Registered 18 feature definitions
+2026-07-20 20:59:01,925 - feature_store - INFO - register_version:78 - Registered version: v20260720_205901
+2026-07-20 20:59:01,925 - feature_store - INFO - create_version:197 - Created feature version: v20260720_205901
+2026-07-20 20:59:01,926 - feature_store - INFO - get_features_for_training:202 - Retrieving features for training (version: v20260720_205901)
+2026-07-20 20:59:01,980 - feature_store - INFO - get_features_for_training:227 - Retrieved 3 feature sets
+2026-07-20 20:59:01,981 - feature_store - INFO - run_feature_store:287 - Retrieved 3 feature sets for training
+2026-07-20 20:59:01,984 - feature_store - INFO - run_feature_store:294 - Sample user features for U0001: 25 features retrieved
+2026-07-20 20:59:01,984 - feature_store - INFO - run_feature_store:299 - ============================================================
+2026-07-20 20:59:01,985 - feature_store - INFO - run_feature_store:300 - Feature Store Pipeline Complete
+2026-07-20 20:59:01,985 - feature_store - INFO - run_feature_store:301 - ============================================================
+2026-07-20 20:59:01,988 - orchestration - INFO - run:142 - [OK] feature_store completed in 0.46s
+2026-07-20 20:59:01,989 - orchestration - INFO - run:126 - 
+============================================================
+2026-07-20 20:59:01,989 - orchestration - INFO - run:127 - Step 7/7: TRAIN_MODEL
+2026-07-20 20:59:01,990 - orchestration - INFO - run:128 - ============================================================
+2026-07-20 20:59:01,990 - orchestration - INFO - task_train_model:75 - [TASK] Running model training...
+2026-07-20 20:59:02,899 - training - INFO - train_and_evaluate:440 - ============================================================
+2026-07-20 20:59:02,900 - training - INFO - train_and_evaluate:441 - Starting Model Training Pipeline
+2026-07-20 20:59:02,901 - training - INFO - train_and_evaluate:442 - ============================================================
+2026-07-20 20:59:02,986 - training - INFO - train_test_split_interactions:263 - Train/Test split: 14498/3625
+2026-07-20 20:59:02,988 - training - INFO - fit:87 - Training Collaborative Filtering (SVD) model...
+2026-07-20 20:59:03,942 - training - INFO - fit:126 - SVD training complete. Factors: 50, Matrix: 500x200
+2026-07-20 20:59:03,944 - training - INFO - fit:171 - Training Content-Based Filtering model...
+2026-07-20 20:59:04,083 - training - INFO - fit:192 - Content-based model trained. Items: 200, Features used: 21
+2026-07-20 20:59:04,084 - training - INFO - evaluate_models:278 - Evaluating models...
+2026-07-20 20:59:04,408 - training - INFO - evaluate_models:290 - CF Results - Precision@10: 0.0250, Recall@10: 0.0406, NDCG@10: 0.0316, RMSE: 3.2465
+2026-07-20 20:59:04,987 - training - INFO - evaluate_models:299 - CB Results - Precision@10: 0.0410, Recall@10: 0.0548, NDCG@10: 0.0438
+2026-07-20 20:59:04,988 - training - INFO - save_models:391 - Saving models...
+2026-07-20 20:59:04,995 - training - INFO - save_models:398 - CF model saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\models\cf_svd_model.pkl
+2026-07-20 20:59:05,004 - training - INFO - save_models:405 - CB model saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\models\cb_model.pkl
+2026-07-20 20:59:05,009 - training - INFO - save_models:435 - Model metadata saved to: C:\Users\biswajits\Desktop\RecoMart-Pipeline\data\models\model_metadata.json
+2026-07-20 20:59:05,012 - training - INFO - train_and_evaluate:475 - ============================================================
+2026-07-20 20:59:05,012 - training - INFO - train_and_evaluate:476 - Model Training Pipeline Complete
+2026-07-20 20:59:05,013 - training - INFO - train_and_evaluate:477 - ============================================================
+2026-07-20 20:59:05,016 - orchestration - INFO - run:142 - [OK] train_model completed in 3.03s
+2026-07-20 20:59:05,026 - orchestration - INFO - run:178 - 
+======================================================================
+2026-07-20 20:59:05,026 - orchestration - INFO - run:179 - PIPELINE COMPLETE - Status: success
+2026-07-20 20:59:05,027 - orchestration - INFO - run:180 - Duration: 21.96s
+2026-07-20 20:59:05,028 - orchestration - INFO - run:181 - Tasks: 7/7 succeeded
+2026-07-20 20:59:05,028 - orchestration - INFO - run:182 - Report: C:\Users\biswajits\Desktop\RecoMart-Pipeline\logs\pipeline_run_20260720_205843.json
+2026-07-20 20:59:05,029 - orchestration - INFO - run:183 - ======================================================================

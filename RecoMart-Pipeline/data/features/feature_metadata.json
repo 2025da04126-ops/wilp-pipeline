@@ -1,0 +1,80 @@
+{
+  "timestamp": "2026-07-20 20:59:01",
+  "user_features": {
+    "records": 500,
+    "columns": [
+      "user_id",
+      "total_transactions",
+      "total_quantity",
+      "avg_rating_given",
+      "std_rating_given",
+      "unique_products_bought",
+      "avg_quantity_per_txn",
+      "first_purchase",
+      "last_purchase",
+      "days_since_last_purchase",
+      "purchase_frequency",
+      "total_events",
+      "total_sessions",
+      "avg_page_duration",
+      "unique_products_viewed",
+      "cart_adds",
+      "searches",
+      "engagement_score",
+      "age",
+      "gender_encoded",
+      "location_encoded",
+      "is_premium",
+      "age_normalized",
+      "days_since_signup",
+      "conversion_rate"
+    ]
+  },
+  "item_features": {
+    "records": 200,
+    "columns": [
+      "product_id",
+      "total_purchases",
+      "unique_buyers",
+      "avg_rating_received",
+      "std_rating_received",
+      "total_quantity_sold",
+      "avg_quantity_per_purchase",
+      "purchase_popularity",
+      "total_views",
+      "unique_viewers",
+      "avg_view_duration",
+      "cart_add_count",
+      "wishlist_count",
+      "view_to_purchase_ratio",
+      "category",
+      "price",
+      "brand",
+      "price_normalized",
+      "category_encoded",
+      "num_reviews",
+      "in_stock",
+      "sentiment_score",
+      "popularity_score",
+      "trending_rank",
+      "social_mentions",
+      "brand_total_purchases"
+    ]
+  },
+  "interaction_features": {
+    "records": 18123,
+    "columns": [
+      "user_id",
+      "product_id",
+      "avg_rating",
+      "num_interactions",
+      "total_quantity",
+      "last_interaction",
+      "view_count",
+      "total_view_duration",
+      "added_to_cart",
+      "added_to_wishlist",
+      "interaction_score"
+    ]
+  }
+}

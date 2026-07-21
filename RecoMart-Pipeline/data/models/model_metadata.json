@@ -1,0 +1,39 @@
+{
+  "run_id": "20260720_205905",
+  "timestamp": "2026-07-20 20:59:05",
+  "models": {
+    "collaborative_filtering": {
+      "algorithm": "SVD (Truncated)",
+      "n_factors": 50,
+      "n_users": 500,
+      "n_items": 200
+    },
+    "content_based": {
+      "algorithm": "Cosine Similarity",
+      "n_items": 200
+    }
+  },
+  "metrics": {
+    "collaborative_filtering": {
+      "precision_at_k": 0.025,
+      "recall_at_k": 0.0406,
+      "ndcg_at_k": 0.0316,
+      "rmse": 3.2465,
+      "k": 10,
+      "num_test_users": 100
+    },
+    "content_based": {
+      "precision_at_k": 0.041,
+      "recall_at_k": 0.0548,
+      "ndcg_at_k": 0.0438,
+      "k": 10,
+      "num_test_users": 100
+    },
+    "evaluation_timestamp": "2026-07-20 20:59:04"
+  },
+  "parameters": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "top_k": 10
+  }
+}

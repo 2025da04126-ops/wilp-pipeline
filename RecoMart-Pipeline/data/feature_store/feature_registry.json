@@ -1,0 +1,208 @@
+{
+  "features": {
+    "total_transactions": {
+      "name": "total_transactions",
+      "description": "Total number of purchases by user",
+      "source": "transactions",
+      "transformation": "count",
+      "dtype": "int",
+      "entity": "user",
+      "created_at": "2026-07-20 20:59:01",
+      "updated_at": "2026-07-20 20:59:01"
+    },
+    "avg_rating_given": {
+      "name": "avg_rating_given",
+      "description": "Average rating given by user",
+      "source": "transactions",
+      "transformation": "mean(rating)",
+      "dtype": "float",
+      "entity": "user",
+      "created_at": "2026-07-20 20:59:01",
+      "updated_at": "2026-07-20 20:59:01"
+    },
+    "unique_products_bought": {
+      "name": "unique_products_bought",
+      "description": "Number of unique products purchased",
+      "source": "transactions",
+      "transformation": "nunique(product_id)",
+      "dtype": "int",
+      "entity": "user",
+      "created_at": "2026-07-20 20:59:01",
+      "updated_at": "2026-07-20 20:59:01"
+    },
+    "purchase_frequency": {
+      "name": "purchase_frequency",
+      "description": "Purchases per month",
+      "source": "transactions",
+      "transformation": "count/months",
+      "dtype": "float",
+      "entity": "user",
+      "created_at": "2026-07-20 20:59:01",
+      "updated_at": "2026-07-20 20:59:01"
+    },
+    "engagement_score": {
+      "name": "engagement_score",
+      "description": "Composite engagement metric",
+      "source": "clickstream",
+      "transformation": "weighted_sum",
+      "dtype": "float",
+      "entity": "user",
+      "created_at": "2026-07-20 20:59:01",
+      "updated_at": "2026-07-20 20:59:01"
+    },
+    "conversion_rate": {
+      "name": "conversion_rate",
+      "description": "Purchase/view ratio",
+      "source": "transactions+clickstream",
+      "transformation": "ratio",
+      "dtype": "float",
+      "entity": "user",
+      "created_at": "2026-07-20 20:59:01",
+      "updated_at": "2026-07-20 20:59:01"
+    },
+    "days_since_last_purchase": {
+      "name": "days_since_last_purchase",
+      "description": "Recency of last purchase",
+      "source": "transactions",
+      "transformation": "days_diff",
+      "dtype": "int",
+      "entity": "user",
+      "created_at": "2026-07-20 20:59:01",
+      "updated_at": "2026-07-20 20:59:01"
+    },
+    "total_purchases": {
+      "name": "total_purchases",
+      "description": "Total purchases of product",
+      "source": "transactions",
+      "transformation": "count",
+      "dtype": "int",
+      "entity": "item",
+      "created_at": "2026-07-20 20:59:01",
+      "updated_at": "2026-07-20 20:59:01"
+    },
+    "avg_rating_received": {
+      "name": "avg_rating_received",
+      "description": "Average rating received",
+      "source": "transactions",
+      "transformation": "mean(rating)",
+      "dtype": "float",
+      "entity": "item",
+      "created_at": "2026-07-20 20:59:01",
+      "updated_at": "2026-07-20 20:59:01"
+    },
+    "purchase_popularity": {
+      "name": "purchase_popularity",
+      "description": "Normalized purchase count",
+      "source": "transactions",
+      "transformation": "normalize",
+      "dtype": "float",
+      "entity": "item",
+      "created_at": "2026-07-20 20:59:01",
+      "updated_at": "2026-07-20 20:59:01"
+    },
+    "view_to_purchase_ratio": {
+      "name": "view_to_purchase_ratio",
+      "description": "Cart adds / views",
+      "source": "clickstream",
+      "transformation": "ratio",
+      "dtype": "float",
+      "entity": "item",
+      "created_at": "2026-07-20 20:59:01",
+      "updated_at": "2026-07-20 20:59:01"
+    },
+    "sentiment_score": {
+      "name": "sentiment_score",
+      "description": "External sentiment analysis score",
+      "source": "external_api",
+      "transformation": "api_fetch",
+      "dtype": "float",
+      "entity": "item",
+      "created_at": "2026-07-20 20:59:01",
+      "updated_at": "2026-07-20 20:59:01"
+    },
+    "popularity_score": {
+      "name": "popularity_score",
+      "description": "External popularity metric",
+      "source": "external_api",
+      "transformation": "api_fetch",
+      "dtype": "float",
+      "entity": "item",
+      "created_at": "2026-07-20 20:59:01",
+      "updated_at": "2026-07-20 20:59:01"
+    },
+    "price_normalized": {
+      "name": "price_normalized",
+      "description": "Min-max normalized price",
+      "source": "products",
+      "transformation": "min_max_scale",
+      "dtype": "float",
+      "entity": "item",
+      "created_at": "2026-07-20 20:59:01",
+      "updated_at": "2026-07-20 20:59:01"
+    },
+    "avg_rating": {
+      "name": "avg_rating",
+      "description": "Average rating for user-item pair",
+      "source": "transactions",
+      "transformation": "mean",
+      "dtype": "float",
+      "entity": "interaction",
+      "created_at": "2026-07-20 20:59:01",
+      "updated_at": "2026-07-20 20:59:01"
+    },
+    "num_interactions": {
+      "name": "num_interactions",
+      "description": "Number of interactions",
+      "source": "transactions",
+      "transformation": "count",
+      "dtype": "int",
+      "entity": "interaction",
+      "created_at": "2026-07-20 20:59:01",
+      "updated_at": "2026-07-20 20:59:01"
+    },
+    "interaction_score": {
+      "name": "interaction_score",
+      "description": "Composite interaction metric",
+      "source": "multi-source",
+      "transformation": "weighted_sum",
+      "dtype": "float",
+      "entity": "interaction",
+      "created_at": "2026-07-20 20:59:01",
+      "updated_at": "2026-07-20 20:59:01"
+    },
+    "view_count": {
+      "name": "view_count",
+      "description": "Number of views for user-item pair",
+      "source": "clickstream",
+      "transformation": "count",
+      "dtype": "int",
+      "entity": "interaction",
+      "created_at": "2026-07-20 20:59:01",
+      "updated_at": "2026-07-20 20:59:01"
+    }
+  },
+  "versions": [
+    {
+      "version_id": "v20260720_205701",
+      "features": [
+        "user_features",
+        "item_features",
+        "interaction_features"
+      ],
+      "description": "Initial feature snapshot",
+      "data_hash": "cc3f27a2692f5ac8c415edc39406ca9d",
+      "created_at": "2026-07-20 20:57:01"
+    },
+    {
+      "version_id": "v20260720_205901",
+      "features": [
+        "user_features",
+        "item_features",
+        "interaction_features"
+      ],
+      "description": "Initial feature snapshot",
+      "data_hash": "cc3f27a2692f5ac8c415edc39406ca9d",
+      "created_at": "2026-07-20 20:59:01"
+    }
+  ]
+}

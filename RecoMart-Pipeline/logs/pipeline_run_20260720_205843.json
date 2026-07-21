@@ -1,0 +1,512 @@
+{
+  "run_id": "20260720_205843",
+  "start_time": "2026-07-20 20:59:05",
+  "total_duration_sec": 21.96,
+  "overall_status": "success",
+  "tasks_executed": 7,
+  "tasks_succeeded": 7,
+  "tasks_failed": 0,
+  "task_results": {
+    "generate_data": {
+      "status": "success",
+      "duration_sec": 3.05,
+      "result": {
+        "status": "success",
+        "datasets": 5
+      }
+    },
+    "ingest_data": {
+      "status": "success",
+      "duration_sec": 0.44,
+      "result": {
+        "start_time": "2026-07-20 20:58:46",
+        "sources": {
+          "clickstream": {
+            "records": 15000,
+            "status": "success",
+            "source_type": "csv"
+          },
+          "transactions": {
+            "records": 5050,
+            "status": "success",
+            "source_type": "csv"
+          },
+          "products": {
+            "records": 200,
+            "status": "success",
+            "source_type": "csv"
+          },
+          "external_api": {
+            "records": 200,
+            "status": "success",
+            "source_type": "api_cached"
+          }
+        },
+        "status": "success",
+        "end_time": "2026-07-20 20:58:46"
+      }
+    },
+    "validate_data": {
+      "status": "success",
+      "duration_sec": 0.32,
+      "result": {
+        "transactions": {
+          "source": "transactions",
+          "validation_timestamp": "2026-07-20 20:58:46",
+          "total_issues": 5,
+          "critical_issues": 1,
+          "warning_issues": 4,
+          "issues": [
+            {
+              "type": "missing_values",
+              "severity": "warning",
+              "column": "user_id",
+              "details": "30 missing (0.59%)"
+            },
+            {
+              "type": "missing_values",
+              "severity": "warning",
+              "column": "product_id",
+              "details": "30 missing (0.59%)"
+            },
+            {
+              "type": "missing_values",
+              "severity": "warning",
+              "column": "quantity",
+              "details": "40 missing (0.79%)"
+            },
+            {
+              "type": "missing_values",
+              "severity": "critical",
+              "column": "rating",
+              "details": "264 missing (5.23%)"
+            },
+            {
+              "type": "duplicates",
+              "severity": "warning",
+              "details": "47 duplicate rows found"
+            }
+          ],
+          "metrics": {
+            "missing_values": {
+              "user_id": {
+                "count": 30,
+                "percentage": 0.59
+              },
+              "product_id": {
+                "count": 30,
+                "percentage": 0.59
+              },
+              "quantity": {
+                "count": 40,
+                "percentage": 0.79
+              },
+              "rating": {
+                "count": 264,
+                "percentage": 5.23
+              }
+            },
+            "duplicates": {
+              "total_duplicates": 47,
+              "primary_key_duplicates": 50
+            },
+            "range_checks": {
+              "rating": {
+                "min_expected": 1,
+                "max_expected": 5,
+                "actual_min": 1.0,
+                "actual_max": 5.0,
+                "below_range": 0,
+                "above_range": 0
+              },
+              "quantity": {
+                "min_expected": 1,
+                "max_expected": 100,
+                "actual_min": 1.0,
+                "actual_max": 4.0,
+                "below_range": 0,
+                "above_range": 0
+              }
+            },
+            "valid_values": {},
+            "statistics": {
+              "total_rows": 5050,
+              "total_columns": 7,
+              "memory_usage_mb": 1.66,
+              "column_types": {
+                "transaction_id": "str",
+                "user_id": "str",
+                "product_id": "str",
+                "quantity": "float64",
+                "rating": "float64",
+                "timestamp": "str",
+                "payment_method": "str"
+              },
+              "numeric_summary": {
+                "quantity": {
+                  "count": 5010.0,
+                  "mean": 2.5111776447105787,
+                  "std": 1.1098457760496878,
+                  "min": 1.0,
+                  "25%": 2.0,
+                  "50%": 3.0,
+                  "75%": 3.0,
+                  "max": 4.0
+                },
+                "rating": {
+                  "count": 4786.0,
+                  "mean": 3.668616798997075,
+                  "std": 1.1181439168785612,
+                  "min": 1.0,
+                  "25%": 3.0,
+                  "50%": 4.0,
+                  "75%": 5.0,
+                  "max": 5.0
+                }
+              }
+            }
+          },
+          "overall_quality_score": 82.0
+        },
+        "products": {
+          "source": "products",
+          "validation_timestamp": "2026-07-20 20:58:46",
+          "total_issues": 0,
+          "critical_issues": 0,
+          "warning_issues": 0,
+          "issues": [],
+          "metrics": {
+            "missing_values": {},
+            "duplicates": {
+              "total_duplicates": 0,
+              "primary_key_duplicates": 0
+            },
+            "range_checks": {
+              "price": {
+                "min_expected": 0.01,
+                "max_expected": 100000,
+                "actual_min": 61.09,
+                "actual_max": 4993.66,
+                "below_range": 0,
+                "above_range": 0
+              },
+              "avg_rating": {
+                "min_expected": 1,
+                "max_expected": 5,
+                "actual_min": 1.0,
+                "actual_max": 5.0,
+                "below_range": 0,
+                "above_range": 0
+              }
+            },
+            "valid_values": {},
+            "statistics": {
+              "total_rows": 200,
+              "total_columns": 8,
+              "memory_usage_mb": 0.05,
+              "column_types": {
+                "product_id": "str",
+                "product_name": "str",
+                "category": "str",
+                "price": "float64",
+                "brand": "str",
+                "avg_rating": "float64",
+                "num_reviews": "int64",
+                "in_stock": "bool"
+              },
+              "numeric_summary": {
+                "price": {
+                  "count": 200.0,
+                  "mean": 2550.6402,
+                  "std": 1483.2803124207626,
+                  "min": 61.09,
+                  "25%": 1277.075,
+                  "50%": 2557.37,
+                  "75%": 3889.7275,
+                  "max": 4993.66
+                },
+                "avg_rating": {
+                  "count": 200.0,
+                  "mean": 3.0655,
+                  "std": 1.1362725582505133,
+                  "min": 1.0,
+                  "25%": 2.1,
+                  "50%": 3.1,
+                  "75%": 4.1,
+                  "max": 5.0
+                },
+                "num_reviews": {
+                  "count": 200.0,
+                  "mean": 484.535,
+                  "std": 287.1094529353294,
+                  "min": 0.0,
+                  "25%": 239.75,
+                  "50%": 503.5,
+                  "75%": 726.5,
+                  "max": 998.0
+                }
+              }
+            }
+          },
+          "overall_quality_score": 100.0
+        },
+        "clickstream": {
+          "source": "clickstream",
+          "validation_timestamp": "2026-07-20 20:58:46",
+          "total_issues": 0,
+          "critical_issues": 0,
+          "warning_issues": 0,
+          "issues": [],
+          "metrics": {
+            "missing_values": {},
+            "duplicates": {
+              "total_duplicates": 0,
+              "primary_key_duplicates": 0
+            },
+            "range_checks": {},
+            "valid_values": {
+              "event_type": {
+                "allowed_values": [
+                  "page_view",
+                  "product_view",
+                  "add_to_cart",
+                  "remove_from_cart",
+                  "wishlist_add",
+                  "search",
+                  "purchase"
+                ],
+                "invalid_count": 0,
+                "invalid_samples": []
+              },
+              "device": {
+                "allowed_values": [
+                  "mobile",
+                  "desktop",
+                  "tablet"
+                ],
+                "invalid_count": 0,
+                "invalid_samples": []
+              }
+            },
+            "statistics": {
+              "total_rows": 15000,
+              "total_columns": 8,
+              "memory_usage_mb": 6.69,
+              "column_types": {
+                "event_id": "str",
+                "user_id": "str",
+                "product_id": "str",
+                "event_type": "str",
+                "session_id": "str",
+                "timestamp": "str",
+                "device": "str",
+                "page_duration_sec": "int64"
+              },
+              "numeric_summary": {
+                "page_duration_sec": {
+                  "count": 15000.0,
+                  "mean": 29.171466666666667,
+                  "std": 29.80264774092586,
+                  "min": 0.0,
+                  "25%": 8.0,
+                  "50%": 20.0,
+                  "75%": 41.0,
+                  "max": 264.0
+                }
+              }
+            }
+          },
+          "overall_quality_score": 100.0
+        },
+        "external_scores": {
+          "source": "external_scores",
+          "validation_timestamp": "2026-07-20 20:58:46",
+          "total_issues": 0,
+          "critical_issues": 0,
+          "warning_issues": 0,
+          "issues": [],
+          "metrics": {
+            "missing_values": {},
+            "duplicates": {
+              "total_duplicates": 0,
+              "primary_key_duplicates": 0
+            },
+            "range_checks": {
+              "sentiment_score": {
+                "min_expected": -1,
+                "max_expected": 1,
+                "actual_min": -0.997,
+                "actual_max": 0.999,
+                "below_range": 0,
+                "above_range": 0
+              },
+              "popularity_score": {
+                "min_expected": 0,
+                "max_expected": 100,
+                "actual_min": 0.62,
+                "actual_max": 98.07,
+                "below_range": 0,
+                "above_range": 0
+              }
+            },
+            "valid_values": {},
+            "statistics": {
+              "total_rows": 200,
+              "total_columns": 7,
+              "memory_usage_mb": 0.03,
+              "column_types": {
+                "product_id": "str",
+                "sentiment_score": "float64",
+                "popularity_score": "float64",
+                "trending_rank": "int64",
+                "social_mentions": "int64",
+                "competitor_price_ratio": "float64",
+                "fetch_timestamp": "str"
+              },
+              "numeric_summary": {
+                "sentiment_score": {
+                  "count": 200.0,
+                  "mean": -0.103295,
+                  "std": 0.5954016489672873,
+                  "min": -0.997,
+                  "25%": -0.6667500000000001,
+                  "50%": -0.129,
+                  "75%": 0.422,
+                  "max": 0.999
+                },
+                "popularity_score": {
+                  "count": 200.0,
+                  "mean": 47.2812,
+                  "std": 29.034121713569913,
+                  "min": 0.62,
+                  "25%": 20.53,
+                  "50%": 49.535,
+                  "75%": 71.97999999999999,
+                  "max": 98.07
+                },
+                "trending_rank": {
+                  "count": 200.0,
+                  "mean": 238.245,
+                  "std": 138.35209243958712,
+                  "min": 6.0,
+                  "25%": 117.75,
+                  "50%": 242.5,
+                  "75%": 346.0,
+                  "max": 495.0
+                },
+                "social_mentions": {
+                  "count": 200.0,
+                  "mean": 2530.335,
+                  "std": 1430.3068169902022,
+                  "min": 37.0,
+                  "25%": 1280.25,
+                  "50%": 2589.0,
+                  "75%": 3642.0,
+                  "max": 4983.0
+                },
+                "competitor_price_ratio": {
+                  "count": 200.0,
+                  "mean": 1.1042500000000002,
+                  "std": 0.23719134929609997,
+                  "min": 0.7,
+                  "25%": 0.8875,
+                  "50%": 1.0950000000000002,
+                  "75%": 1.33,
+                  "max": 1.5
+                }
+              }
+            }
+          },
+          "overall_quality_score": 100.0
+        }
+      }
+    },
+    "prepare_data": {
+      "status": "success",
+      "duration_sec": 9.41,
+      "result": {
+        "preparation_timestamp": "2026-07-20 20:58:56",
+        "datasets": {
+          "transactions": {
+            "records": 4943,
+            "unique_users": 500,
+            "unique_products": 200,
+            "avg_rating": 3.69,
+            "date_range": "2024-01-01 01:23:00 to 2024-12-30 22:02:00"
+          },
+          "products": {
+            "records": 200,
+            "categories": 8,
+            "avg_price": 2550.64
+          },
+          "users": {
+            "records": 500,
+            "avg_age": 41.3
+          },
+          "clickstream": {
+            "records": 15000,
+            "event_types": 7
+          }
+        }
+      }
+    },
+    "transform_data": {
+      "status": "success",
+      "duration_sec": 5.24,
+      "result": {
+        "user_features": 500,
+        "item_features": 200,
+        "interaction_features": 18123,
+        "matrix_shape": [
+          500,
+          200
+        ],
+        "matrix_sparsity": 0.8188
+      }
+    },
+    "feature_store": {
+      "status": "success",
+      "duration_sec": 0.46,
+      "result": {
+        "registered_features": 18,
+        "versions": 2,
+        "latest_version": {
+          "version_id": "v20260720_205901",
+          "features": [
+            "user_features",
+            "item_features",
+            "interaction_features"
+          ],
+          "description": "Initial feature snapshot",
+          "data_hash": "cc3f27a2692f5ac8c415edc39406ca9d",
+          "created_at": "2026-07-20 20:59:01"
+        },
+        "user_features_count": 500,
+        "item_features_count": 200,
+        "interaction_features_count": 18123
+      }
+    },
+    "train_model": {
+      "status": "success",
+      "duration_sec": 3.03,
+      "result": {
+        "collaborative_filtering": {
+          "precision_at_k": 0.025,
+          "recall_at_k": 0.0406,
+          "ndcg_at_k": 0.0316,
+          "rmse": 3.2465,
+          "k": 10,
+          "num_test_users": 100
+        },
+        "content_based": {
+          "precision_at_k": 0.041,
+          "recall_at_k": 0.0548,
+          "ndcg_at_k": 0.0438,
+          "k": 10,
+          "num_test_users": 100
+        },
+        "evaluation_timestamp": "2026-07-20 20:59:04"
+      }
+    }
+  }
+}

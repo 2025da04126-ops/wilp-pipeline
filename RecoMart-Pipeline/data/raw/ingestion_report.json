@@ -1,0 +1,27 @@
+{
+  "start_time": "2026-07-20 20:58:46",
+  "sources": {
+    "clickstream": {
+      "records": 15000,
+      "status": "success",
+      "source_type": "csv"
+    },
+    "transactions": {
+      "records": 5050,
+      "status": "success",
+      "source_type": "csv"
+    },
+    "products": {
+      "records": 200,
+      "status": "success",
+      "source_type": "csv"
+    },
+    "external_api": {
+      "records": 200,
+      "status": "success",
+      "source_type": "api_cached"
+    }
+  },
+  "status": "success",
+  "end_time": "2026-07-20 20:58:46"
+}

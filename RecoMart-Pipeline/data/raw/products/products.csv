@@ -1,0 +1,201 @@
+product_id,product_name,category,price,brand,avg_rating,num_reviews,in_stock
+P0001,Product_1,Sports,561.59,BrandD,1.7,100,False
+P0002,Product_2,Electronics,2476.04,BrandG,4.4,380,True
+P0003,Product_3,Food & Grocery,271.29,BrandA,4.1,192,True
+P0004,Product_4,Clothing,1592.56,BrandC,3.3,161,True
+P0005,Product_5,Beauty,3772.6,BrandE,4.7,936,False
+P0006,Product_6,Books,3591.72,BrandH,4.7,605,True
+P0007,Product_7,Electronics,4710.69,BrandC,4.4,832,False
+P0008,Product_8,Home & Kitchen,3895.63,BrandE,1.6,499,True
+P0009,Product_9,Clothing,1115.38,BrandE,2.3,733,False
+P0010,Product_10,Home & Kitchen,4529.61,BrandH,3.0,160,True
+P0011,Product_11,Home & Kitchen,2783.71,BrandH,2.6,17,True
+P0012,Product_12,Books,4232.24,BrandB,1.4,274,True
+P0013,Product_13,Toys,4616.32,BrandC,4.4,101,True
+P0014,Product_14,Toys,4153.36,BrandA,2.2,257,True
+P0015,Product_15,Food & Grocery,2001.28,BrandF,2.3,315,True
+P0016,Product_16,Electronics,3011.03,BrandD,4.1,762,True
+P0017,Product_17,Home & Kitchen,2191.86,BrandF,2.4,221,True
+P0018,Product_18,Food & Grocery,3486.03,BrandH,4.3,183,True
+P0019,Product_19,Books,2449.2,BrandH,1.5,703,True
+P0020,Product_20,Home & Kitchen,684.89,BrandB,4.1,583,True
+P0021,Product_21,Home & Kitchen,3239.63,BrandG,2.5,643,True
+P0022,Product_22,Clothing,1063.3,BrandA,2.1,78,True
+P0023,Product_23,Clothing,3737.54,BrandA,3.4,917,True
+P0024,Product_24,Food & Grocery,572.81,BrandG,2.2,702,True
+P0025,Product_25,Books,86.18,BrandD,3.6,118,True
+P0026,Product_26,Home & Kitchen,1705.72,BrandG,3.9,318,True
+P0027,Product_27,Books,4847.81,BrandC,4.6,602,True
+P0028,Product_28,Home & Kitchen,3519.83,BrandG,2.3,587,True
+P0029,Product_29,Beauty,2097.74,BrandA,4.7,395,True
+P0030,Product_30,Sports,647.72,BrandH,4.9,829,True
+P0031,Product_31,Sports,348.8,BrandB,3.3,388,True
+P0032,Product_32,Electronics,3644.75,BrandH,2.5,273,True
+P0033,Product_33,Beauty,4531.98,BrandD,4.8,41,False
+P0034,Product_34,Sports,129.33,BrandD,4.2,366,True
+P0035,Product_35,Electronics,2941.5,BrandH,3.3,89,True
+P0036,Product_36,Sports,3656.59,BrandF,3.7,35,True
+P0037,Product_37,Food & Grocery,1496.38,BrandA,4.3,825,True
+P0038,Product_38,Electronics,2637.85,BrandF,2.2,797,False
+P0039,Product_39,Books,4083.52,BrandH,1.5,756,False
+P0040,Product_40,Sports,3001.82,BrandG,3.1,80,True
+P0041,Product_41,Electronics,1923.85,BrandF,2.8,187,True
+P0042,Product_42,Clothing,433.91,BrandE,1.8,964,True
+P0043,Product_43,Books,2460.19,BrandD,2.6,687,False
+P0044,Product_44,Electronics,2367.56,BrandF,3.0,33,True
+P0045,Product_45,Sports,948.6,BrandH,3.0,389,False
+P0046,Product_46,Sports,397.17,BrandB,3.2,1,True
+P0047,Product_47,Electronics,2566.58,BrandA,3.0,837,True
+P0048,Product_48,Sports,1692.67,BrandA,4.3,579,True
+P0049,Product_49,Clothing,1111.76,BrandG,1.2,428,True
+P0050,Product_50,Food & Grocery,518.55,BrandD,4.8,686,False
+P0051,Product_51,Beauty,4197.76,BrandC,1.5,376,True
+P0052,Product_52,Sports,1807.81,BrandA,1.1,566,True
+P0053,Product_53,Food & Grocery,4142.59,BrandG,4.8,819,True
+P0054,Product_54,Electronics,178.51,BrandF,4.4,215,True
+P0055,Product_55,Beauty,61.09,BrandG,4.8,197,True
+P0056,Product_56,Electronics,4625.87,BrandG,5.0,652,True
+P0057,Product_57,Home & Kitchen,3385.97,BrandC,3.3,91,False
+P0058,Product_58,Books,4974.33,BrandG,3.2,11,True
+P0059,Product_59,Clothing,2423.55,BrandC,2.0,693,True
+P0060,Product_60,Home & Kitchen,837.73,BrandG,1.5,469,False
+P0061,Product_61,Clothing,4763.8,BrandC,4.2,666,False
+P0062,Product_62,Beauty,872.05,BrandE,3.7,465,True
+P0063,Product_63,Electronics,1877.96,BrandC,1.8,811,True
+P0064,Product_64,Toys,4676.07,BrandH,4.6,661,False
+P0065,Product_65,Books,454.12,BrandE,3.1,543,True
+P0066,Product_66,Books,2297.11,BrandF,1.8,937,False
+P0067,Product_67,Beauty,4442.09,BrandF,3.0,440,True
+P0068,Product_68,Beauty,1631.06,BrandF,1.5,787,True
+P0069,Product_69,Beauty,4815.16,BrandA,3.4,496,True
+P0070,Product_70,Electronics,4986.99,BrandD,4.3,768,True
+P0071,Product_71,Books,2455.78,BrandD,2.0,699,True
+P0072,Product_72,Home & Kitchen,1640.39,BrandC,3.2,832,True
+P0073,Product_73,Books,4868.52,BrandB,1.7,246,True
+P0074,Product_74,Food & Grocery,4993.66,BrandE,4.2,561,True
+P0075,Product_75,Food & Grocery,2253.8,BrandA,2.2,504,True
+P0076,Product_76,Beauty,271.49,BrandD,4.9,20,True
+P0077,Product_77,Home & Kitchen,2262.95,BrandH,3.3,992,True
+P0078,Product_78,Toys,3565.37,BrandE,2.6,825,True
+P0079,Product_79,Home & Kitchen,3149.05,BrandH,3.3,471,True
+P0080,Product_80,Books,3369.72,BrandG,1.1,347,True
+P0081,Product_81,Toys,4861.0,BrandF,4.2,56,False
+P0082,Product_82,Books,3326.76,BrandA,3.4,20,True
+P0083,Product_83,Sports,502.68,BrandB,4.6,998,True
+P0084,Product_84,Books,2969.17,BrandG,4.8,408,False
+P0085,Product_85,Food & Grocery,1097.33,BrandF,4.2,407,True
+P0086,Product_86,Home & Kitchen,3985.62,BrandG,1.3,893,True
+P0087,Product_87,Home & Kitchen,1784.01,BrandB,4.9,588,True
+P0088,Product_88,Toys,2537.06,BrandE,4.0,593,True
+P0089,Product_89,Electronics,3532.52,BrandH,3.9,65,True
+P0090,Product_90,Home & Kitchen,899.56,BrandD,2.5,440,True
+P0091,Product_91,Toys,3025.24,BrandD,1.3,649,True
+P0092,Product_92,Beauty,842.17,BrandG,2.9,503,True
+P0093,Product_93,Sports,4141.56,BrandC,1.2,515,True
+P0094,Product_94,Food & Grocery,1696.87,BrandB,3.3,531,False
+P0095,Product_95,Sports,2756.15,BrandB,4.1,335,True
+P0096,Product_96,Beauty,4162.02,BrandB,2.9,508,True
+P0097,Product_97,Toys,4846.88,BrandD,3.0,560,False
+P0098,Product_98,Home & Kitchen,1671.3,BrandE,2.2,545,True
+P0099,Product_99,Beauty,487.45,BrandH,1.1,334,True
+P0100,Product_100,Home & Kitchen,4819.27,BrandH,2.9,461,False
+P0101,Product_101,Electronics,4947.05,BrandG,4.0,294,True
+P0102,Product_102,Home & Kitchen,4599.43,BrandF,1.2,570,True
+P0103,Product_103,Toys,4259.9,BrandB,4.4,542,False
+P0104,Product_104,Beauty,2493.78,BrandB,2.0,149,True
+P0105,Product_105,Home & Kitchen,2369.65,BrandD,2.8,163,False
+P0106,Product_106,Books,2816.82,BrandF,3.0,437,True
+P0107,Product_107,Clothing,579.17,BrandB,1.8,887,True
+P0108,Product_108,Toys,4498.75,BrandB,1.2,659,False
+P0109,Product_109,Electronics,3094.98,BrandA,2.8,786,True
+P0110,Product_110,Electronics,4960.63,BrandD,1.9,81,True
+P0111,Product_111,Sports,3478.25,BrandC,5.0,672,True
+P0112,Product_112,Toys,1805.94,BrandD,1.3,695,True
+P0113,Product_113,Food & Grocery,908.64,BrandC,3.8,476,True
+P0114,Product_114,Beauty,278.53,BrandG,4.3,917,True
+P0115,Product_115,Food & Grocery,1667.61,BrandC,3.1,70,True
+P0116,Product_116,Sports,1811.18,BrandC,2.4,327,True
+P0117,Product_117,Home & Kitchen,2422.97,BrandD,1.2,926,True
+P0118,Product_118,Food & Grocery,3311.94,BrandF,3.4,369,True
+P0119,Product_119,Clothing,475.41,BrandB,4.3,374,True
+P0120,Product_120,Home & Kitchen,1517.41,BrandE,1.9,726,True
+P0121,Product_121,Clothing,1056.94,BrandA,1.5,876,True
+P0122,Product_122,Beauty,3278.19,BrandF,3.4,533,True
+P0123,Product_123,Beauty,2906.92,BrandA,3.1,888,False
+P0124,Product_124,Electronics,3424.92,BrandC,1.5,533,False
+P0125,Product_125,Electronics,1123.8,BrandG,3.3,739,True
+P0126,Product_126,Home & Kitchen,160.24,BrandC,3.6,213,True
+P0127,Product_127,Toys,242.92,BrandC,1.8,79,False
+P0128,Product_128,Clothing,2310.73,BrandE,3.7,898,True
+P0129,Product_129,Sports,4394.17,BrandC,4.0,995,True
+P0130,Product_130,Toys,2718.83,BrandB,1.8,563,True
+P0131,Product_131,Toys,2651.19,BrandC,2.0,83,True
+P0132,Product_132,Sports,2743.92,BrandB,4.0,608,True
+P0133,Product_133,Food & Grocery,2606.27,BrandD,1.4,841,False
+P0134,Product_134,Home & Kitchen,4437.44,BrandB,2.7,802,True
+P0135,Product_135,Food & Grocery,2080.46,BrandB,4.2,431,True
+P0136,Product_136,Clothing,4106.63,BrandG,2.3,59,True
+P0137,Product_137,Sports,4169.47,BrandF,1.5,751,True
+P0138,Product_138,Beauty,2991.2,BrandF,2.5,736,True
+P0139,Product_139,Electronics,1032.16,BrandB,2.9,830,True
+P0140,Product_140,Sports,3887.76,BrandG,1.9,206,True
+P0141,Product_141,Sports,76.88,BrandA,1.0,977,False
+P0142,Product_142,Food & Grocery,311.09,BrandC,2.5,402,False
+P0143,Product_143,Sports,2926.69,BrandB,1.5,347,True
+P0144,Product_144,Home & Kitchen,1297.27,BrandB,1.6,98,True
+P0145,Product_145,Books,1357.65,BrandG,4.1,47,True
+P0146,Product_146,Clothing,267.87,BrandC,2.8,389,True
+P0147,Product_147,Toys,4489.26,BrandD,2.0,135,True
+P0148,Product_148,Food & Grocery,2809.37,BrandG,2.1,42,True
+P0149,Product_149,Electronics,166.83,BrandB,3.6,973,True
+P0150,Product_150,Home & Kitchen,2884.64,BrandA,4.7,18,True
+P0151,Product_151,Electronics,3529.9,BrandE,5.0,111,False
+P0152,Product_152,Clothing,3588.04,BrandD,2.9,507,False
+P0153,Product_153,Electronics,2257.86,BrandE,3.3,399,True
+P0154,Product_154,Clothing,2154.09,BrandF,1.1,0,True
+P0155,Product_155,Home & Kitchen,1419.63,BrandC,4.9,434,True
+P0156,Product_156,Sports,4724.88,BrandD,5.0,260,True
+P0157,Product_157,Food & Grocery,3957.82,BrandH,2.0,671,True
+P0158,Product_158,Beauty,4959.9,BrandF,3.7,371,True
+P0159,Product_159,Sports,4544.14,BrandC,4.0,699,True
+P0160,Product_160,Beauty,2066.77,BrandC,3.8,141,True
+P0161,Product_161,Books,2211.98,BrandD,3.2,512,True
+P0162,Product_162,Electronics,3136.65,BrandB,3.0,125,False
+P0163,Product_163,Toys,1655.22,BrandE,2.7,249,False
+P0164,Product_164,Electronics,211.3,BrandA,3.3,728,True
+P0165,Product_165,Home & Kitchen,863.86,BrandE,3.8,59,True
+P0166,Product_166,Sports,2803.69,BrandA,4.1,409,True
+P0167,Product_167,Books,2708.37,BrandD,3.6,952,True
+P0168,Product_168,Books,4860.46,BrandE,1.7,561,False
+P0169,Product_169,Sports,2681.46,BrandG,4.4,608,True
+P0170,Product_170,Sports,3353.98,BrandC,2.3,351,True
+P0171,Product_171,Home & Kitchen,1392.76,BrandC,2.1,889,True
+P0172,Product_172,Clothing,1995.22,BrandA,2.1,766,False
+P0173,Product_173,Sports,397.63,BrandD,3.0,684,True
+P0174,Product_174,Books,2247.05,BrandF,3.8,761,True
+P0175,Product_175,Books,1034.12,BrandB,4.1,512,True
+P0176,Product_176,Sports,359.85,BrandE,3.8,331,True
+P0177,Product_177,Food & Grocery,3976.91,BrandA,1.2,695,False
+P0178,Product_178,Books,745.38,BrandF,2.4,883,True
+P0179,Product_179,Clothing,4471.14,BrandD,3.8,671,True
+P0180,Product_180,Home & Kitchen,953.55,BrandH,3.2,425,True
+P0181,Product_181,Toys,4063.97,BrandB,4.8,109,False
+P0182,Product_182,Sports,4390.31,BrandE,3.7,612,True
+P0183,Product_183,Beauty,93.89,BrandA,4.7,808,True
+P0184,Product_184,Beauty,3106.38,BrandC,2.1,644,True
+P0185,Product_185,Electronics,4058.58,BrandH,4.1,734,True
+P0186,Product_186,Home & Kitchen,4643.42,BrandG,1.5,123,False
+P0187,Product_187,Sports,2936.2,BrandG,3.8,301,True
+P0188,Product_188,Books,3928.33,BrandF,3.5,867,True
+P0189,Product_189,Sports,2548.16,BrandF,3.7,808,True
+P0190,Product_190,Food & Grocery,2914.55,BrandE,4.4,76,True
+P0191,Product_191,Food & Grocery,1216.49,BrandE,3.0,736,False
+P0192,Product_192,Clothing,2169.36,BrandC,3.7,493,True
+P0193,Product_193,Home & Kitchen,3267.99,BrandB,2.1,96,True
+P0194,Product_194,Books,1448.08,BrandA,2.9,586,True
+P0195,Product_195,Food & Grocery,2220.59,BrandF,4.6,146,False
+P0196,Product_196,Food & Grocery,4727.27,BrandB,3.8,961,True
+P0197,Product_197,Clothing,579.11,BrandB,1.4,267,False
+P0198,Product_198,Home & Kitchen,2033.1,BrandG,1.4,369,True
+P0199,Product_199,Clothing,3984.4,BrandA,2.9,63,True
+P0200,Product_200,Toys,558.86,BrandB,4.4,919,False
